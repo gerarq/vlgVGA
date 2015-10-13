@@ -1,2 +1,2 @@
 # vlgVGA
-Test en DE1 board from Altera
+VGA test over a DE1 board from Altera
