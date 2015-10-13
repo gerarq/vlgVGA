@@ -1,0 +1,7 @@
+module vga_sync (
+input wire clk,
+output reg href,
+output reg vsync,
+output reg x_pxl,
+output reg  y_pxl
+);

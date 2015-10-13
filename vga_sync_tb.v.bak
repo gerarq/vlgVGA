@@ -1,0 +1,46 @@
+`timescale 1 ns/ 100 ps
+
+module vga_sync_tb();
+parameter T = 20;
+
+
+reg clk;
+reg reset;
+reg [3:0] key_in;
+wire z_out;
+
+                         
+vga_sync dut (
+ 
+	.reset(reset),
+	.clk(clk),
+	.key_in(key_in),
+	.z_out(z_out)
+);
+initial begin                                                  
+                                            
+$display("Running testbench");
+clk = 1'b1;
+reset = 1'b0;
+#25
+reset = 1'b1;
+key_in = 4'b1111;
+#20
+key_in = 4'b1110;
+#20
+key_in = 4'b1100;
+#20
+key_in = 4'b1000;
+#20
+$display($time,"<<Finishing Simulation>>");
+$stop;
+$finish;
+                   
+end  
+
+always begin
+		#(T/2) clk = ~clk;
+	end
+		                                                
+endmodule
+

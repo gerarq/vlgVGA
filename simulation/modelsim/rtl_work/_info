@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Grd\Desktop\vga_hdmi\cyclonevga\simulation\modelsim
+vpixel_gen
+I4[V3dNSHT<<ad0]LP57@60
+VHeVkICg8KdHJ9ABSNUZTi1
+Z1 dC:\Users\Grd\Desktop\vga_hdmi\cyclonevga\simulation\modelsim
+w1444699234
+8C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/pixel_gen.v
+FC:/Users/Grd/Desktop/vga_hdmi/cyclonevga/pixel_gen.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/Grd/Desktop/vga_hdmi/cyclonevga -O0
+!i10b 1
+!s100 5V<7DM<Y:JU>::035NU7W0
+!s85 0
+!s108 1444702935.772000
+!s107 C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/pixel_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Grd/Desktop/vga_hdmi/cyclonevga|C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/pixel_gen.v|
+!s101 -O0
+vvga_driver
+IlAAc;a`:MTJ[llFYL89[L1
+Vzkm<I^@H>BI1U82n8aNn22
+R1
+w1444695303
+8C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_driver.v
+FC:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_driver.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 _iGM3ARUaMzX8Nge2PoJ;1
+!s85 0
+!s108 1444702935.837000
+!s107 C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_driver.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Grd/Desktop/vga_hdmi/cyclonevga|C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_driver.v|
+!s101 -O0
+vvga_sync
+IOEfJOLo[:ABR5LKf9ch4E2
+VZ14YoF6=BEa2kHD3M73FH3
+R1
+w1444702767
+8C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_sync.v
+FC:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_sync.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 :Rm^NS3f=B0Y[F7hS890F1
+!s85 0
+!s108 1444702935.698000
+!s107 C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_sync.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Grd/Desktop/vga_hdmi/cyclonevga|C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_sync.v|
+!s101 -O0
+vvga_sync_tb
+!i10b 1
+!s100 ?[=MZKYPA@73:<El;NY472
+IKnFAAM^BC4IgPCSMQm>2Z2
+Vg2kF_BC<Qohg0XKOY47RU1
+R1
+w1444701701
+8C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_sync_tb.v
+FC:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_sync_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1444702935.901000
+!s107 C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_sync_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Grd/Desktop/vga_hdmi/cyclonevga|C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/vga_sync_tb.v|
+!s101 -O0
+R3
+R4

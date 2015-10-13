@@ -1,0 +1,6 @@
+module pixel_gen (
+input wire x_pxl,
+input wire  y_pxl
+output reg rgb[23:0]]
+);
+

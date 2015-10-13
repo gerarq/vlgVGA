@@ -1,0 +1,103 @@
+|vga_driver
+clk => clk.IN1
+rst => rst.IN2
+rgb[0] <= pixel_gen:pixel_gen_dev.rgb
+rgb[1] <= pixel_gen:pixel_gen_dev.rgb
+rgb[2] <= pixel_gen:pixel_gen_dev.rgb
+rgb[3] <= pixel_gen:pixel_gen_dev.rgb
+rgb[4] <= pixel_gen:pixel_gen_dev.rgb
+rgb[5] <= pixel_gen:pixel_gen_dev.rgb
+rgb[6] <= pixel_gen:pixel_gen_dev.rgb
+rgb[7] <= pixel_gen:pixel_gen_dev.rgb
+rgb[8] <= pixel_gen:pixel_gen_dev.rgb
+rgb[9] <= pixel_gen:pixel_gen_dev.rgb
+rgb[10] <= pixel_gen:pixel_gen_dev.rgb
+rgb[11] <= pixel_gen:pixel_gen_dev.rgb
+href <= vga_sync:vga_sync_dev.href
+vsync <= vga_sync:vga_sync_dev.vsync
+
+
+|vga_driver|vga_sync:vga_sync_dev
+clk => clk_div.CLK
+rst => vcount[0].ACLR
+rst => vcount[1].ACLR
+rst => vcount[2].ACLR
+rst => vcount[3].ACLR
+rst => vcount[4].ACLR
+rst => vcount[5].ACLR
+rst => vcount[6].ACLR
+rst => vcount[7].ACLR
+rst => vcount[8].ACLR
+rst => vcount[9].ACLR
+rst => hcount[0].ACLR
+rst => hcount[1].ACLR
+rst => hcount[2].ACLR
+rst => hcount[3].ACLR
+rst => hcount[4].ACLR
+rst => hcount[5].ACLR
+rst => hcount[6].ACLR
+rst => hcount[7].ACLR
+rst => hcount[8].ACLR
+rst => hcount[9].ACLR
+rst => vsync~reg0.ACLR
+rst => href~reg0.ACLR
+y_pxl[0] <= y_pxl.DB_MAX_OUTPUT_PORT_TYPE
+y_pxl[1] <= y_pxl.DB_MAX_OUTPUT_PORT_TYPE
+y_pxl[2] <= y_pxl.DB_MAX_OUTPUT_PORT_TYPE
+y_pxl[3] <= y_pxl.DB_MAX_OUTPUT_PORT_TYPE
+y_pxl[4] <= y_pxl.DB_MAX_OUTPUT_PORT_TYPE
+y_pxl[5] <= y_pxl.DB_MAX_OUTPUT_PORT_TYPE
+y_pxl[6] <= y_pxl.DB_MAX_OUTPUT_PORT_TYPE
+y_pxl[7] <= y_pxl.DB_MAX_OUTPUT_PORT_TYPE
+y_pxl[8] <= y_pxl.DB_MAX_OUTPUT_PORT_TYPE
+y_pxl[9] <= y_pxl.DB_MAX_OUTPUT_PORT_TYPE
+x_pxl[0] <= x_pxl.DB_MAX_OUTPUT_PORT_TYPE
+x_pxl[1] <= x_pxl.DB_MAX_OUTPUT_PORT_TYPE
+x_pxl[2] <= x_pxl.DB_MAX_OUTPUT_PORT_TYPE
+x_pxl[3] <= x_pxl.DB_MAX_OUTPUT_PORT_TYPE
+x_pxl[4] <= x_pxl.DB_MAX_OUTPUT_PORT_TYPE
+x_pxl[5] <= x_pxl.DB_MAX_OUTPUT_PORT_TYPE
+x_pxl[6] <= x_pxl.DB_MAX_OUTPUT_PORT_TYPE
+x_pxl[7] <= x_pxl.DB_MAX_OUTPUT_PORT_TYPE
+x_pxl[8] <= x_pxl.DB_MAX_OUTPUT_PORT_TYPE
+x_pxl[9] <= x_pxl.DB_MAX_OUTPUT_PORT_TYPE
+href <= href~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vsync <= vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga_driver|pixel_gen:pixel_gen_dev
+rst => ~NO_FANOUT~
+x_pxl[0] => WideAnd0.IN0
+x_pxl[1] => WideAnd0.IN1
+x_pxl[2] => WideAnd0.IN2
+x_pxl[3] => WideAnd0.IN3
+x_pxl[4] => WideAnd0.IN4
+x_pxl[5] => WideAnd0.IN5
+x_pxl[6] => WideAnd0.IN6
+x_pxl[7] => WideAnd0.IN7
+x_pxl[8] => WideAnd0.IN8
+x_pxl[9] => WideAnd0.IN9
+y_pxl[0] => ~NO_FANOUT~
+y_pxl[1] => ~NO_FANOUT~
+y_pxl[2] => ~NO_FANOUT~
+y_pxl[3] => ~NO_FANOUT~
+y_pxl[4] => ~NO_FANOUT~
+y_pxl[5] => ~NO_FANOUT~
+y_pxl[6] => ~NO_FANOUT~
+y_pxl[7] => ~NO_FANOUT~
+y_pxl[8] => ~NO_FANOUT~
+y_pxl[9] => ~NO_FANOUT~
+rgb[0] <= <GND>
+rgb[1] <= <GND>
+rgb[2] <= <GND>
+rgb[3] <= <GND>
+rgb[4] <= <GND>
+rgb[5] <= <GND>
+rgb[6] <= <GND>
+rgb[7] <= <GND>
+rgb[8] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+rgb[9] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+rgb[10] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+rgb[11] <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+
+
