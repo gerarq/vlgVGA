@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for vga_test
-Tue Oct 13 03:29:09 2015
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Sun Apr 12 19:56:15 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -81,21 +81,15 @@ applicable agreement for further details.
 +--------------------+-------------------------------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -108,13 +102,13 @@ applicable agreement for further details.
 +-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
 
 
-+--------------------------------------------------------------------+
-; Slow Model Fmax Summary                                            ;
-+-----------+-----------------+-------------------------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name                    ; Note ;
-+-----------+-----------------+-------------------------------+------+
-; 284.5 MHz ; 284.5 MHz       ; vga_sync:vga_sync_dev|clk_div ;      ;
-+-----------+-----------------+-------------------------------+------+
++---------------------------------------------------------------------+
+; Slow Model Fmax Summary                                             ;
++------------+-----------------+-------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                    ; Note ;
++------------+-----------------+-------------------------------+------+
+; 298.24 MHz ; 298.24 MHz      ; vga_sync:vga_sync_dev|clk_div ;      ;
++------------+-----------------+-------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -123,7 +117,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------+--------+---------------+
 ; Clock                         ; Slack  ; End Point TNS ;
 +-------------------------------+--------+---------------+
-; vga_sync:vga_sync_dev|clk_div ; -2.515 ; -43.754       ;
+; vga_sync:vga_sync_dev|clk_div ; -2.353 ; -47.240       ;
 ; clk                           ; 2.116  ; 0.000         ;
 +-------------------------------+--------+---------------+
 
@@ -165,106 +159,106 @@ No paths to report.
 +--------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
 ; Slack  ; From Node                       ; To Node                         ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
-; -2.515 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.553      ;
-; -2.515 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.553      ;
-; -2.515 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.553      ;
-; -2.515 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.553      ;
-; -2.496 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.534      ;
-; -2.496 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.534      ;
-; -2.496 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.534      ;
-; -2.496 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.534      ;
-; -2.424 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.462      ;
-; -2.424 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.462      ;
-; -2.424 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.462      ;
-; -2.424 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.462      ;
-; -2.423 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.461      ;
-; -2.423 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.461      ;
-; -2.423 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.461      ;
-; -2.423 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.461      ;
-; -2.402 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.440      ;
-; -2.402 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.440      ;
-; -2.402 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.440      ;
-; -2.402 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.440      ;
-; -2.391 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.429      ;
-; -2.391 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.429      ;
-; -2.391 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.429      ;
-; -2.391 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.429      ;
-; -2.371 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.409      ;
-; -2.371 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.409      ;
-; -2.371 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.409      ;
-; -2.371 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.409      ;
-; -2.363 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.401      ;
-; -2.363 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.401      ;
-; -2.363 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.401      ;
-; -2.363 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.401      ;
-; -2.353 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.391      ;
-; -2.353 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.391      ;
-; -2.353 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.391      ;
-; -2.353 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.391      ;
-; -2.313 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.351      ;
-; -2.313 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.351      ;
-; -2.313 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.351      ;
-; -2.313 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.351      ;
-; -2.294 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.332      ;
-; -2.288 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.326      ;
-; -2.288 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.326      ;
-; -2.288 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.326      ;
-; -2.288 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.326      ;
-; -2.227 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.265      ;
-; -2.227 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.265      ;
-; -2.227 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.265      ;
-; -2.227 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.265      ;
-; -2.226 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.264      ;
-; -2.213 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.251      ;
-; -2.213 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.251      ;
-; -2.213 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.251      ;
-; -2.213 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.251      ;
-; -2.185 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.223      ;
-; -2.166 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.204      ;
-; -2.149 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.187      ;
-; -2.143 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.181      ;
-; -2.136 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.174      ;
-; -2.136 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.174      ;
-; -2.136 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.174      ;
-; -2.136 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.174      ;
-; -2.130 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.168      ;
-; -2.128 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.166      ;
-; -2.128 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.166      ;
-; -2.128 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.166      ;
-; -2.128 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.166      ;
-; -2.126 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.164      ;
-; -2.126 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.164      ;
-; -2.126 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.164      ;
-; -2.126 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.164      ;
-; -2.096 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.134      ;
-; -2.094 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.132      ;
-; -2.072 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.110      ;
-; -2.072 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.110      ;
-; -2.072 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.110      ;
-; -2.072 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.110      ;
-; -2.061 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.099      ;
-; -2.060 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.098      ;
-; -2.058 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.096      ;
-; -2.041 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.079      ;
-; -2.033 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.071      ;
-; -2.028 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.066      ;
-; -2.025 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.063      ;
-; -2.019 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.057      ;
-; -2.005 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.043      ;
-; -1.997 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.035      ;
-; -1.997 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.035      ;
-; -1.968 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.006      ;
-; -1.968 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.006      ;
-; -1.968 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.006      ;
-; -1.968 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.006      ;
-; -1.964 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.002      ;
-; -1.964 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.002      ;
-; -1.964 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.002      ;
-; -1.964 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.002      ;
-; -1.951 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 2.989      ;
-; -1.945 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 2.983      ;
-; -1.934 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 2.972      ;
-; -1.932 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 2.970      ;
+; -2.353 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.390      ;
+; -2.353 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.390      ;
+; -2.353 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.390      ;
+; -2.353 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.390      ;
+; -2.348 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.386      ;
+; -2.320 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.358      ;
+; -2.319 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.357      ;
+; -2.317 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.355      ;
+; -2.317 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.355      ;
+; -2.317 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.355      ;
+; -2.317 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.355      ;
+; -2.312 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.349      ;
+; -2.312 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.349      ;
+; -2.312 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.349      ;
+; -2.312 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.349      ;
+; -2.294 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.332      ;
+; -2.293 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.331      ;
+; -2.284 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.322      ;
+; -2.284 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.322      ;
+; -2.284 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.322      ;
+; -2.284 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.322      ;
+; -2.277 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.315      ;
+; -2.264 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.301      ;
+; -2.263 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.300      ;
+; -2.258 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.296      ;
+; -2.258 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.296      ;
+; -2.258 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.296      ;
+; -2.258 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.296      ;
+; -2.241 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.279      ;
+; -2.232 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.269      ;
+; -2.232 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.269      ;
+; -2.232 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.269      ;
+; -2.232 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.269      ;
+; -2.219 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.257      ;
+; -2.218 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.256      ;
+; -2.193 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.231      ;
+; -2.193 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.231      ;
+; -2.189 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.226      ;
+; -2.170 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.207      ;
+; -2.166 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.203      ;
+; -2.163 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.200      ;
+; -2.161 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.199      ;
+; -2.161 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.198      ;
+; -2.160 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.198      ;
+; -2.142 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.180      ;
+; -2.142 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.180      ;
+; -2.142 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.180      ;
+; -2.142 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.180      ;
+; -2.141 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.178      ;
+; -2.141 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.178      ;
+; -2.141 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.178      ;
+; -2.141 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.178      ;
+; -2.140 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.177      ;
+; -2.139 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.176      ;
+; -2.133 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.002     ; 3.169      ;
+; -2.129 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.166      ;
+; -2.125 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.163      ;
+; -2.125 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.163      ;
+; -2.125 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.163      ;
+; -2.125 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.163      ;
+; -2.125 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.162      ;
+; -2.122 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.160      ;
+; -2.122 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.160      ;
+; -2.122 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.160      ;
+; -2.121 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.158      ;
+; -2.120 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.157      ;
+; -2.118 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.156      ;
+; -2.099 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.136      ;
+; -2.098 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.135      ;
+; -2.089 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.126      ;
+; -2.089 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.126      ;
+; -2.089 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.126      ;
+; -2.089 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.126      ;
+; -2.088 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.126      ;
+; -2.088 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.126      ;
+; -2.088 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.126      ;
+; -2.088 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.126      ;
+; -2.088 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.126      ;
+; -2.088 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.126      ;
+; -2.088 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.126      ;
+; -2.088 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.126      ;
+; -2.088 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.126      ;
+; -2.088 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.126      ;
+; -2.088 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.001     ; 3.125      ;
+; -2.086 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.124      ;
+; -2.086 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.124      ;
+; -2.072 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.001      ; 3.111      ;
+; -2.072 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.001      ; 3.111      ;
+; -2.072 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.001      ; 3.111      ;
+; -2.072 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.001      ; 3.111      ;
+; -2.070 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.001      ; 3.109      ;
+; -2.069 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.001      ; 3.108      ;
+; -2.059 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.097      ;
+; -2.059 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.097      ;
+; -2.059 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.097      ;
+; -2.059 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.097      ;
+; -2.051 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.089      ;
+; -2.047 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.085      ;
+; -2.047 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.085      ;
+; -2.047 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 3.085      ;
 +--------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
 
 
@@ -293,106 +287,106 @@ No paths to report.
 +-------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
 ; Slack ; From Node                       ; To Node                         ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
-; 0.445 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.731      ;
-; 0.858 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.144      ;
+; 0.445 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.731      ;
+; 0.806 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.092      ;
 ; 0.990 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.276      ;
-; 0.994 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.280      ;
-; 0.997 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.283      ;
-; 1.001 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.287      ;
-; 1.024 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.310      ;
-; 1.029 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.315      ;
-; 1.034 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.320      ;
-; 1.035 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.321      ;
-; 1.186 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.472      ;
-; 1.201 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.487      ;
-; 1.215 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.501      ;
-; 1.238 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.524      ;
-; 1.395 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.681      ;
+; 0.995 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.281      ;
+; 0.995 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.281      ;
+; 1.030 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.316      ;
+; 1.034 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.320      ;
+; 1.034 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.320      ;
+; 1.035 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.321      ;
+; 1.035 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.320      ;
+; 1.039 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.325      ;
+; 1.044 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.330      ;
+; 1.192 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.478      ;
+; 1.251 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.537      ;
+; 1.370 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.655      ;
+; 1.417 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.702      ;
+; 1.417 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.702      ;
 ; 1.422 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.708      ;
-; 1.426 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.712      ;
-; 1.429 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.715      ;
-; 1.457 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.743      ;
-; 1.462 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.748      ;
-; 1.467 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.753      ;
-; 1.468 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.754      ;
-; 1.470 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.756      ;
-; 1.472 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.758      ;
-; 1.474 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.760      ;
-; 1.484 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.770      ;
+; 1.427 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.713      ;
+; 1.427 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.713      ;
+; 1.463 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.749      ;
+; 1.467 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.753      ;
+; 1.468 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.754      ;
+; 1.472 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.758      ;
+; 1.475 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.761      ;
+; 1.479 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.764      ;
 ; 1.502 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.788      ;
-; 1.506 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.792      ;
-; 1.509 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.795      ;
-; 1.520 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.806      ;
-; 1.522 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.808      ;
-; 1.523 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.809      ;
-; 1.534 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.820      ;
-; 1.538 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.824      ;
-; 1.542 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.828      ;
-; 1.547 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.833      ;
-; 1.561 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.847      ;
+; 1.507 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.793      ;
+; 1.515 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.800      ;
+; 1.543 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.829      ;
+; 1.547 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.833      ;
+; 1.548 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.834      ;
+; 1.553 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.838      ;
+; 1.561 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.846      ;
+; 1.561 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.846      ;
+; 1.568 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.854      ;
+; 1.568 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.854      ;
+; 1.568 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.854      ;
+; 1.568 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.854      ;
+; 1.568 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.854      ;
+; 1.568 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.854      ;
+; 1.568 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.854      ;
 ; 1.582 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.868      ;
-; 1.586 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.872      ;
-; 1.589 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.875      ;
-; 1.614 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.900      ;
-; 1.614 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.900      ;
-; 1.622 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.908      ;
-; 1.633 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.919      ;
-; 1.642 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.928      ;
+; 1.627 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.913      ;
+; 1.646 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.932      ;
+; 1.646 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.931      ;
 ; 1.662 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.948      ;
-; 1.666 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.952      ;
-; 1.671 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.957      ;
-; 1.672 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.958      ;
-; 1.694 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.980      ;
-; 1.702 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.988      ;
-; 1.710 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.996      ;
-; 1.710 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.996      ;
-; 1.710 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.996      ;
-; 1.710 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.996      ;
-; 1.710 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.996      ;
-; 1.713 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.999      ;
-; 1.721 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.007      ;
-; 1.722 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.008      ;
-; 1.746 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.032      ;
-; 1.763 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.049      ;
-; 1.785 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.071      ;
-; 1.789 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.075      ;
-; 1.801 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.087      ;
-; 1.802 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.088      ;
-; 1.822 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.108      ;
-; 1.824 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.110      ;
-; 1.843 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.129      ;
-; 1.846 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.132      ;
-; 1.861 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.147      ;
-; 1.861 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.147      ;
-; 1.861 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.147      ;
-; 1.861 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.147      ;
-; 1.861 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.147      ;
-; 1.861 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.147      ;
-; 1.861 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.147      ;
-; 1.861 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.147      ;
-; 1.868 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.154      ;
-; 1.876 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.162      ;
-; 1.881 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.167      ;
-; 1.887 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.173      ;
-; 1.889 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.175      ;
-; 1.889 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.175      ;
-; 1.891 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.177      ;
-; 1.918 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.204      ;
-; 1.920 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.206      ;
-; 1.923 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.209      ;
-; 1.947 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.233      ;
-; 1.949 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.235      ;
-; 1.949 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.235      ;
-; 1.950 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.236      ;
-; 1.951 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.237      ;
-; 1.952 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.238      ;
-; 1.953 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.239      ;
-; 1.953 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.239      ;
-; 1.953 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.239      ;
+; 1.668 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.953      ;
+; 1.684 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.970      ;
+; 1.685 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.970      ;
+; 1.704 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.989      ;
+; 1.704 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 1.989      ;
+; 1.707 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 1.993      ;
+; 1.722 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.008      ;
+; 1.726 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.012      ;
+; 1.728 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.014      ;
+; 1.729 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 2.014      ;
+; 1.734 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 2.019      ;
+; 1.742 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.028      ;
+; 1.764 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.050      ;
+; 1.802 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.088      ;
+; 1.803 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.089      ;
+; 1.806 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.092      ;
+; 1.808 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.094      ;
+; 1.809 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 2.094      ;
+; 1.813 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 2.098      ;
+; 1.814 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.001      ; 2.101      ;
+; 1.822 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.108      ;
+; 1.844 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.130      ;
+; 1.860 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.146      ;
+; 1.868 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.154      ;
+; 1.873 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 2.158      ;
+; 1.875 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.161      ;
+; 1.878 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 2.163      ;
+; 1.881 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.167      ;
+; 1.882 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.168      ;
+; 1.888 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.001      ; 2.175      ;
+; 1.888 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.174      ;
+; 1.891 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.177      ;
+; 1.891 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.177      ;
+; 1.891 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.177      ;
+; 1.891 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.177      ;
+; 1.891 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.177      ;
+; 1.891 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.177      ;
+; 1.891 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.177      ;
+; 1.891 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.177      ;
+; 1.924 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.210      ;
+; 1.941 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.227      ;
+; 1.958 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.244      ;
+; 1.958 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 2.243      ;
+; 1.961 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.247      ;
+; 1.970 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.256      ;
+; 1.970 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.256      ;
+; 1.977 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.001     ; 2.262      ;
+; 1.988 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.274      ;
+; 1.992 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.278      ;
+; 1.995 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 2.281      ;
 +-------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
 
 
@@ -518,13 +512,21 @@ No paths to report.
 +-----------+-------------------------------+--------+--------+------------+-------------------------------+
 ; Data Port ; Clock Port                    ; Rise   ; Fall   ; Clock Edge ; Clock Reference               ;
 +-----------+-------------------------------+--------+--------+------------+-------------------------------+
-; href      ; vga_sync:vga_sync_dev|clk_div ; 9.502  ; 9.502  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 11.449 ; 11.449 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 11.173 ; 11.173 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 11.178 ; 11.178 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 11.158 ; 11.158 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 11.449 ; 11.449 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; vsync     ; vga_sync:vga_sync_dev|clk_div ; 9.492  ; 9.492  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; href      ; vga_sync:vga_sync_dev|clk_div ; 8.170  ; 8.170  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 36.960 ; 36.960 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[0]   ; vga_sync:vga_sync_dev|clk_div ; 36.960 ; 36.960 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[1]   ; vga_sync:vga_sync_dev|clk_div ; 35.230 ; 35.230 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[2]   ; vga_sync:vga_sync_dev|clk_div ; 33.030 ; 33.030 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[3]   ; vga_sync:vga_sync_dev|clk_div ; 34.293 ; 34.293 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[4]   ; vga_sync:vga_sync_dev|clk_div ; 35.700 ; 35.700 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[5]   ; vga_sync:vga_sync_dev|clk_div ; 34.425 ; 34.425 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[6]   ; vga_sync:vga_sync_dev|clk_div ; 33.557 ; 33.557 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[7]   ; vga_sync:vga_sync_dev|clk_div ; 34.722 ; 34.722 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 36.401 ; 36.401 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 34.145 ; 34.145 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 35.538 ; 35.538 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 35.070 ; 35.070 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; vsync     ; vga_sync:vga_sync_dev|clk_div ; 7.574  ; 7.574  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
 +-----------+-------------------------------+--------+--------+------------+-------------------------------+
 
 
@@ -533,13 +535,21 @@ No paths to report.
 +-----------+-------------------------------+--------+--------+------------+-------------------------------+
 ; Data Port ; Clock Port                    ; Rise   ; Fall   ; Clock Edge ; Clock Reference               ;
 +-----------+-------------------------------+--------+--------+------------+-------------------------------+
-; href      ; vga_sync:vga_sync_dev|clk_div ; 9.502  ; 9.502  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 10.489 ; 10.489 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 10.504 ; 10.504 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 10.509 ; 10.509 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 10.489 ; 10.489 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 10.780 ; 10.780 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; vsync     ; vga_sync:vga_sync_dev|clk_div ; 9.492  ; 9.492  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; href      ; vga_sync:vga_sync_dev|clk_div ; 8.170  ; 8.170  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 9.960  ; 9.960  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[0]   ; vga_sync:vga_sync_dev|clk_div ; 10.482 ; 10.482 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[1]   ; vga_sync:vga_sync_dev|clk_div ; 11.416 ; 11.416 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[2]   ; vga_sync:vga_sync_dev|clk_div ; 11.670 ; 11.670 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[3]   ; vga_sync:vga_sync_dev|clk_div ; 9.960  ; 9.960  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[4]   ; vga_sync:vga_sync_dev|clk_div ; 10.269 ; 10.269 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[5]   ; vga_sync:vga_sync_dev|clk_div ; 12.323 ; 12.323 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[6]   ; vga_sync:vga_sync_dev|clk_div ; 12.269 ; 12.269 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[7]   ; vga_sync:vga_sync_dev|clk_div ; 12.166 ; 12.166 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 10.789 ; 10.789 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 12.019 ; 12.019 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 11.684 ; 11.684 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 10.300 ; 10.300 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; vsync     ; vga_sync:vga_sync_dev|clk_div ; 7.574  ; 7.574  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
 +-----------+-------------------------------+--------+--------+------------+-------------------------------+
 
 
@@ -548,7 +558,7 @@ No paths to report.
 +-------------------------------+--------+---------------+
 ; Clock                         ; Slack  ; End Point TNS ;
 +-------------------------------+--------+---------------+
-; vga_sync:vga_sync_dev|clk_div ; -0.479 ; -4.679        ;
+; vga_sync:vga_sync_dev|clk_div ; -0.371 ; -5.451        ;
 ; clk                           ; 1.343  ; 0.000         ;
 +-------------------------------+--------+---------------+
 
@@ -590,106 +600,106 @@ No paths to report.
 +--------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
 ; Slack  ; From Node                       ; To Node                         ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
-; -0.479 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.511      ;
-; -0.479 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.511      ;
-; -0.479 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.511      ;
-; -0.479 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.511      ;
-; -0.469 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.501      ;
-; -0.469 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.501      ;
-; -0.469 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.501      ;
-; -0.469 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.501      ;
-; -0.431 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.463      ;
-; -0.431 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.463      ;
-; -0.431 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.463      ;
-; -0.431 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.463      ;
-; -0.420 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.452      ;
-; -0.420 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.452      ;
-; -0.420 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.452      ;
-; -0.420 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.452      ;
-; -0.418 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.450      ;
-; -0.418 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.450      ;
-; -0.418 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.450      ;
-; -0.418 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.450      ;
-; -0.409 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.441      ;
-; -0.409 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.441      ;
-; -0.409 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.441      ;
-; -0.409 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.441      ;
-; -0.408 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.440      ;
-; -0.408 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.440      ;
-; -0.408 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.440      ;
-; -0.408 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.440      ;
-; -0.392 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.424      ;
-; -0.392 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.424      ;
-; -0.392 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.424      ;
-; -0.392 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.424      ;
-; -0.360 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.392      ;
-; -0.360 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.392      ;
-; -0.360 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.392      ;
-; -0.360 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.392      ;
-; -0.358 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.390      ;
-; -0.358 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.390      ;
-; -0.358 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.390      ;
-; -0.358 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.390      ;
-; -0.354 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.386      ;
-; -0.354 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.386      ;
-; -0.354 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.386      ;
-; -0.354 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.386      ;
-; -0.341 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.373      ;
-; -0.341 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.373      ;
-; -0.341 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.373      ;
-; -0.341 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.373      ;
-; -0.333 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.365      ;
-; -0.333 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.365      ;
-; -0.333 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.365      ;
-; -0.333 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.365      ;
-; -0.308 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.340      ;
-; -0.308 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.340      ;
-; -0.308 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.340      ;
-; -0.308 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.340      ;
-; -0.298 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.330      ;
-; -0.298 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.330      ;
-; -0.298 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.330      ;
-; -0.298 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.330      ;
-; -0.282 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.314      ;
-; -0.282 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.314      ;
-; -0.282 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.314      ;
-; -0.282 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.314      ;
-; -0.278 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.310      ;
-; -0.273 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.305      ;
-; -0.273 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.305      ;
-; -0.273 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.305      ;
-; -0.273 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.305      ;
-; -0.249 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.281      ;
-; -0.244 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.276      ;
-; -0.244 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.276      ;
-; -0.244 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.276      ;
-; -0.244 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.276      ;
-; -0.233 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.265      ;
-; -0.233 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.265      ;
-; -0.223 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.255      ;
-; -0.223 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.255      ;
-; -0.213 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.245      ;
-; -0.213 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.245      ;
-; -0.213 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.245      ;
-; -0.213 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.245      ;
-; -0.212 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.244      ;
-; -0.206 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.238      ;
-; -0.177 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.209      ;
-; -0.177 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.209      ;
-; -0.172 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.204      ;
-; -0.172 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.204      ;
-; -0.163 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.195      ;
-; -0.163 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.195      ;
-; -0.162 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.194      ;
-; -0.162 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.194      ;
-; -0.162 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.194      ;
-; -0.159 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.191      ;
-; -0.158 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.190      ;
-; -0.154 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.186      ;
-; -0.154 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.186      ;
-; -0.154 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.186      ;
-; -0.154 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.186      ;
-; -0.154 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.186      ;
+; -0.371 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.403      ;
+; -0.371 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.403      ;
+; -0.371 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.403      ;
+; -0.371 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.403      ;
+; -0.363 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.395      ;
+; -0.363 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.395      ;
+; -0.363 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.395      ;
+; -0.363 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.395      ;
+; -0.356 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.388      ;
+; -0.356 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.388      ;
+; -0.356 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.388      ;
+; -0.356 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.388      ;
+; -0.354 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.386      ;
+; -0.344 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.376      ;
+; -0.336 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.368      ;
+; -0.336 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.368      ;
+; -0.336 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.368      ;
+; -0.336 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.368      ;
+; -0.307 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.339      ;
+; -0.307 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.339      ;
+; -0.307 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.339      ;
+; -0.307 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.339      ;
+; -0.299 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.331      ;
+; -0.274 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.306      ;
+; -0.274 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.306      ;
+; -0.274 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.306      ;
+; -0.274 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.306      ;
+; -0.270 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.302      ;
+; -0.268 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.300      ;
+; -0.264 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.296      ;
+; -0.264 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.296      ;
+; -0.261 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.293      ;
+; -0.261 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.293      ;
+; -0.261 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.293      ;
+; -0.261 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.293      ;
+; -0.254 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.286      ;
+; -0.254 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.286      ;
+; -0.250 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.282      ;
+; -0.250 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.282      ;
+; -0.250 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.282      ;
+; -0.250 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.282      ;
+; -0.248 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.002      ; 1.282      ;
+; -0.248 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.002      ; 1.282      ;
+; -0.248 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.002      ; 1.282      ;
+; -0.248 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.002      ; 1.282      ;
+; -0.246 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.278      ;
+; -0.246 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.278      ;
+; -0.246 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.278      ;
+; -0.246 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.278      ;
+; -0.246 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.278      ;
+; -0.246 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.278      ;
+; -0.246 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.278      ;
+; -0.246 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.278      ;
+; -0.246 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.278      ;
+; -0.246 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.278      ;
+; -0.244 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.276      ;
+; -0.242 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.274      ;
+; -0.242 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.274      ;
+; -0.234 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.266      ;
+; -0.234 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.266      ;
+; -0.234 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.266      ;
+; -0.234 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.266      ;
+; -0.231 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.263      ;
+; -0.231 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.263      ;
+; -0.231 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.263      ;
+; -0.231 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.263      ;
+; -0.231 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.263      ;
+; -0.231 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.263      ;
+; -0.231 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.263      ;
+; -0.231 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.263      ;
+; -0.231 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.263      ;
+; -0.231 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.263      ;
+; -0.230 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.262      ;
+; -0.221 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.253      ;
+; -0.221 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.253      ;
+; -0.221 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.253      ;
+; -0.221 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.253      ;
+; -0.216 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.002     ; 1.246      ;
+; -0.215 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.247      ;
+; -0.213 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.245      ;
+; -0.213 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.245      ;
+; -0.213 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.245      ;
+; -0.213 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.245      ;
+; -0.206 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; -0.002     ; 1.236      ;
+; -0.202 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.234      ;
+; -0.202 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.234      ;
+; -0.202 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.234      ;
+; -0.202 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.234      ;
+; -0.201 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.233      ;
+; -0.201 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.233      ;
+; -0.194 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 1.000        ; 0.000      ; 1.226      ;
 +--------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
 
 
@@ -718,106 +728,106 @@ No paths to report.
 +-------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
 ; Slack ; From Node                       ; To Node                         ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
-; 0.215 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.367      ;
-; 0.322 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.474      ;
+; 0.215 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.367      ;
+; 0.306 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.458      ;
 ; 0.367 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.519      ;
-; 0.371 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.523      ;
-; 0.375 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.527      ;
-; 0.375 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.527      ;
-; 0.381 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.533      ;
+; 0.370 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.522      ;
+; 0.372 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.524      ;
+; 0.380 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.532      ;
+; 0.382 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.534      ;
 ; 0.382 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.534      ;
-; 0.382 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.534      ;
-; 0.383 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.535      ;
-; 0.439 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.591      ;
-; 0.446 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.598      ;
-; 0.451 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.603      ;
-; 0.451 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.603      ;
+; 0.382 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.534      ;
+; 0.384 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.536      ;
+; 0.386 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.538      ;
+; 0.392 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.002     ; 0.542      ;
+; 0.443 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.595      ;
+; 0.456 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.608      ;
 ; 0.505 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.657      ;
-; 0.509 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.661      ;
-; 0.513 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.665      ;
-; 0.521 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.673      ;
-; 0.522 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.674      ;
+; 0.508 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.660      ;
+; 0.510 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.662      ;
+; 0.520 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.672      ;
+; 0.522 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.674      ;
 ; 0.522 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.674      ;
-; 0.531 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.683      ;
+; 0.524 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.676      ;
+; 0.530 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.002     ; 0.680      ;
+; 0.536 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.688      ;
+; 0.536 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.688      ;
 ; 0.540 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.692      ;
-; 0.541 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.693      ;
-; 0.544 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.696      ;
-; 0.544 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.696      ;
-; 0.545 ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.697      ;
-; 0.548 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.700      ;
-; 0.555 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.707      ;
-; 0.556 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.708      ;
-; 0.556 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.708      ;
+; 0.545 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.697      ;
+; 0.555 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.707      ;
+; 0.557 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.709      ;
 ; 0.557 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.709      ;
-; 0.561 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.713      ;
-; 0.568 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.720      ;
-; 0.572 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.724      ;
-; 0.572 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.724      ;
-; 0.573 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.725      ;
+; 0.572 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.724      ;
 ; 0.575 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.727      ;
-; 0.577 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.729      ;
-; 0.579 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.731      ;
-; 0.579 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.731      ;
-; 0.583 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.735      ;
-; 0.591 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.743      ;
-; 0.591 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.743      ;
-; 0.594 ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.746      ;
-; 0.603 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.755      ;
+; 0.580 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.732      ;
+; 0.584 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.736      ;
+; 0.584 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.736      ;
+; 0.584 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.736      ;
+; 0.592 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.744      ;
+; 0.594 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.002     ; 0.744      ;
+; 0.596 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.748      ;
+; 0.605 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.002     ; 0.755      ;
 ; 0.610 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.762      ;
-; 0.612 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.764      ;
-; 0.614 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.766      ;
-; 0.616 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.768      ;
-; 0.626 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.778      ;
-; 0.629 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.781      ;
-; 0.638 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.790      ;
+; 0.618 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.770      ;
+; 0.627 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.779      ;
+; 0.631 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.783      ;
+; 0.631 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.783      ;
+; 0.637 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.789      ;
+; 0.643 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.002     ; 0.793      ;
+; 0.645 ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.797      ;
 ; 0.645 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.797      ;
-; 0.649 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.801      ;
-; 0.651 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.803      ;
 ; 0.651 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.803      ;
-; 0.654 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.806      ;
-; 0.662 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.814      ;
-; 0.668 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.820      ;
-; 0.677 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.829      ;
+; 0.653 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.805      ;
+; 0.656 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.808      ;
+; 0.659 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.811      ;
+; 0.659 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.811      ;
+; 0.660 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.812      ;
+; 0.665 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.817      ;
+; 0.665 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.817      ;
+; 0.665 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.817      ;
+; 0.665 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.817      ;
+; 0.665 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.817      ;
+; 0.665 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.817      ;
+; 0.666 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.818      ;
+; 0.671 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.002     ; 0.821      ;
+; 0.672 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.824      ;
+; 0.677 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.829      ;
 ; 0.680 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.832      ;
-; 0.681 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.833      ;
-; 0.685 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.837      ;
-; 0.686 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.838      ;
+; 0.684 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.836      ;
 ; 0.686 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.838      ;
-; 0.711 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.863      ;
-; 0.712 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.864      ;
-; 0.714 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.866      ;
-; 0.714 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.866      ;
-; 0.717 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.869      ;
-; 0.717 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.869      ;
-; 0.717 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.869      ;
-; 0.717 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.869      ;
-; 0.719 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.871      ;
-; 0.720 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.872      ;
+; 0.687 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.839      ;
+; 0.688 ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.840      ;
+; 0.688 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.840      ;
+; 0.691 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.002      ; 0.845      ;
+; 0.701 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.853      ;
+; 0.704 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.856      ;
+; 0.707 ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.859      ;
+; 0.708 ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.860      ;
+; 0.715 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.002      ; 0.869      ;
+; 0.717 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.869      ;
+; 0.721 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.873      ;
 ; 0.721 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.873      ;
-; 0.722 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.874      ;
-; 0.722 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.874      ;
-; 0.722 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.874      ;
-; 0.723 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.875      ;
-; 0.723 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.875      ;
-; 0.723 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.875      ;
-; 0.723 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.875      ;
-; 0.724 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.876      ;
-; 0.725 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.877      ;
-; 0.726 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.878      ;
-; 0.727 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.879      ;
-; 0.728 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.880      ;
-; 0.732 ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.884      ;
-; 0.739 ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.891      ;
-; 0.743 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[7] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.895      ;
-; 0.747 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|hcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.899      ;
-; 0.748 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.900      ;
-; 0.748 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.900      ;
-; 0.749 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[5] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.901      ;
-; 0.749 ; vga_sync:vga_sync_dev|hcount[0] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.901      ;
+; 0.722 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.002     ; 0.872      ;
+; 0.724 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.876      ;
+; 0.727 ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.879      ;
+; 0.735 ; vga_sync:vga_sync_dev|vcount[7] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.887      ;
+; 0.736 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[2] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.888      ;
+; 0.736 ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.888      ;
+; 0.736 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|hcount[6] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.888      ;
+; 0.741 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vcount[1] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.893      ;
+; 0.745 ; vga_sync:vga_sync_dev|vcount[3] ; vga_sync:vga_sync_dev|vsync     ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; -0.002     ; 0.895      ;
+; 0.746 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.898      ;
+; 0.749 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.901      ;
+; 0.750 ; vga_sync:vga_sync_dev|hcount[3] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.902      ;
+; 0.750 ; vga_sync:vga_sync_dev|hcount[1] ; vga_sync:vga_sync_dev|vcount[0] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.902      ;
+; 0.751 ; vga_sync:vga_sync_dev|hcount[4] ; vga_sync:vga_sync_dev|href      ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.903      ;
+; 0.756 ; vga_sync:vga_sync_dev|hcount[2] ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.908      ;
+; 0.756 ; vga_sync:vga_sync_dev|hcount[8] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.908      ;
+; 0.757 ; vga_sync:vga_sync_dev|vcount[6] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.002      ; 0.911      ;
+; 0.759 ; vga_sync:vga_sync_dev|vcount[9] ; vga_sync:vga_sync_dev|vcount[4] ; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 0.000        ; 0.000      ; 0.911      ;
 +-------+---------------------------------+---------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
 
 
@@ -938,19 +948,27 @@ No paths to report.
 +--------+--------------+----------------+------------------+-------------------------------+------------+---------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                                  ;
-+-----------+-------------------------------+-------+-------+------------+-------------------------------+
-; Data Port ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
-+-----------+-------------------------------+-------+-------+------------+-------------------------------+
-; href      ; vga_sync:vga_sync_dev|clk_div ; 4.722 ; 4.722 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 5.468 ; 5.468 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 5.377 ; 5.377 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 5.382 ; 5.382 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 5.360 ; 5.360 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 5.468 ; 5.468 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; vsync     ; vga_sync:vga_sync_dev|clk_div ; 4.703 ; 4.703 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-+-----------+-------------------------------+-------+-------+------------+-------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                    ;
++-----------+-------------------------------+--------+--------+------------+-------------------------------+
+; Data Port ; Clock Port                    ; Rise   ; Fall   ; Clock Edge ; Clock Reference               ;
++-----------+-------------------------------+--------+--------+------------+-------------------------------+
+; href      ; vga_sync:vga_sync_dev|clk_div ; 4.181  ; 4.181  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 15.121 ; 15.121 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[0]   ; vga_sync:vga_sync_dev|clk_div ; 15.121 ; 15.121 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[1]   ; vga_sync:vga_sync_dev|clk_div ; 14.669 ; 14.669 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[2]   ; vga_sync:vga_sync_dev|clk_div ; 13.716 ; 13.716 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[3]   ; vga_sync:vga_sync_dev|clk_div ; 14.098 ; 14.098 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[4]   ; vga_sync:vga_sync_dev|clk_div ; 14.717 ; 14.717 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[5]   ; vga_sync:vga_sync_dev|clk_div ; 14.229 ; 14.229 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[6]   ; vga_sync:vga_sync_dev|clk_div ; 13.776 ; 13.776 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[7]   ; vga_sync:vga_sync_dev|clk_div ; 14.372 ; 14.372 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 14.900 ; 14.900 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 14.081 ; 14.081 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 14.705 ; 14.705 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 14.526 ; 14.526 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; vsync     ; vga_sync:vga_sync_dev|clk_div ; 3.992  ; 3.992  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
++-----------+-------------------------------+--------+--------+------------+-------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------+
@@ -958,13 +976,21 @@ No paths to report.
 +-----------+-------------------------------+-------+-------+------------+-------------------------------+
 ; Data Port ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
 +-----------+-------------------------------+-------+-------+------------+-------------------------------+
-; href      ; vga_sync:vga_sync_dev|clk_div ; 4.722 ; 4.722 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 5.120 ; 5.120 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 5.137 ; 5.137 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 5.142 ; 5.142 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 5.120 ; 5.120 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 5.228 ; 5.228 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; vsync     ; vga_sync:vga_sync_dev|clk_div ; 4.703 ; 4.703 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; href      ; vga_sync:vga_sync_dev|clk_div ; 4.181 ; 4.181 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 4.844 ; 4.844 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[0]   ; vga_sync:vga_sync_dev|clk_div ; 5.066 ; 5.066 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[1]   ; vga_sync:vga_sync_dev|clk_div ; 5.403 ; 5.403 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[2]   ; vga_sync:vga_sync_dev|clk_div ; 5.481 ; 5.481 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[3]   ; vga_sync:vga_sync_dev|clk_div ; 4.844 ; 4.844 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[4]   ; vga_sync:vga_sync_dev|clk_div ; 4.966 ; 4.966 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[5]   ; vga_sync:vga_sync_dev|clk_div ; 5.753 ; 5.753 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[6]   ; vga_sync:vga_sync_dev|clk_div ; 5.714 ; 5.714 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[7]   ; vga_sync:vga_sync_dev|clk_div ; 5.677 ; 5.677 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 5.140 ; 5.140 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 5.643 ; 5.643 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 5.484 ; 5.484 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 4.992 ; 4.992 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; vsync     ; vga_sync:vga_sync_dev|clk_div ; 3.992 ; 3.992 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
 +-----------+-------------------------------+-------+-------+------------+-------------------------------+
 
 
@@ -973,12 +999,12 @@ No paths to report.
 +--------------------------------+---------+--------+----------+---------+---------------------+
 ; Clock                          ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------------------+---------+--------+----------+---------+---------------------+
-; Worst-case Slack               ; -2.515  ; -1.864 ; N/A      ; N/A     ; -1.631              ;
+; Worst-case Slack               ; -2.353  ; -1.864 ; N/A      ; N/A     ; -1.631              ;
 ;  clk                           ; 1.343   ; -1.864 ; N/A      ; N/A     ; -1.631              ;
-;  vga_sync:vga_sync_dev|clk_div ; -2.515  ; 0.215  ; N/A      ; N/A     ; -0.611              ;
-; Design-wide TNS                ; -43.754 ; -1.864 ; 0.0      ; 0.0     ; -29.737             ;
+;  vga_sync:vga_sync_dev|clk_div ; -2.353  ; 0.215  ; N/A      ; N/A     ; -0.611              ;
+; Design-wide TNS                ; -47.24  ; -1.864 ; 0.0      ; 0.0     ; -29.737             ;
 ;  clk                           ; 0.000   ; -1.864 ; N/A      ; N/A     ; -2.853              ;
-;  vga_sync:vga_sync_dev|clk_div ; -43.754 ; 0.000  ; N/A      ; N/A     ; -26.884             ;
+;  vga_sync:vga_sync_dev|clk_div ; -47.240 ; 0.000  ; N/A      ; N/A     ; -26.884             ;
 +--------------------------------+---------+--------+----------+---------+---------------------+
 
 
@@ -987,13 +1013,21 @@ No paths to report.
 +-----------+-------------------------------+--------+--------+------------+-------------------------------+
 ; Data Port ; Clock Port                    ; Rise   ; Fall   ; Clock Edge ; Clock Reference               ;
 +-----------+-------------------------------+--------+--------+------------+-------------------------------+
-; href      ; vga_sync:vga_sync_dev|clk_div ; 9.502  ; 9.502  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 11.449 ; 11.449 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 11.173 ; 11.173 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 11.178 ; 11.178 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 11.158 ; 11.158 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 11.449 ; 11.449 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; vsync     ; vga_sync:vga_sync_dev|clk_div ; 9.492  ; 9.492  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; href      ; vga_sync:vga_sync_dev|clk_div ; 8.170  ; 8.170  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 36.960 ; 36.960 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[0]   ; vga_sync:vga_sync_dev|clk_div ; 36.960 ; 36.960 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[1]   ; vga_sync:vga_sync_dev|clk_div ; 35.230 ; 35.230 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[2]   ; vga_sync:vga_sync_dev|clk_div ; 33.030 ; 33.030 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[3]   ; vga_sync:vga_sync_dev|clk_div ; 34.293 ; 34.293 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[4]   ; vga_sync:vga_sync_dev|clk_div ; 35.700 ; 35.700 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[5]   ; vga_sync:vga_sync_dev|clk_div ; 34.425 ; 34.425 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[6]   ; vga_sync:vga_sync_dev|clk_div ; 33.557 ; 33.557 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[7]   ; vga_sync:vga_sync_dev|clk_div ; 34.722 ; 34.722 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 36.401 ; 36.401 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 34.145 ; 34.145 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 35.538 ; 35.538 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 35.070 ; 35.070 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; vsync     ; vga_sync:vga_sync_dev|clk_div ; 7.574  ; 7.574  ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
 +-----------+-------------------------------+--------+--------+------------+-------------------------------+
 
 
@@ -1002,13 +1036,21 @@ No paths to report.
 +-----------+-------------------------------+-------+-------+------------+-------------------------------+
 ; Data Port ; Clock Port                    ; Rise  ; Fall  ; Clock Edge ; Clock Reference               ;
 +-----------+-------------------------------+-------+-------+------------+-------------------------------+
-; href      ; vga_sync:vga_sync_dev|clk_div ; 4.722 ; 4.722 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 5.120 ; 5.120 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 5.137 ; 5.137 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 5.142 ; 5.142 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 5.120 ; 5.120 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 5.228 ; 5.228 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
-; vsync     ; vga_sync:vga_sync_dev|clk_div ; 4.703 ; 4.703 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; href      ; vga_sync:vga_sync_dev|clk_div ; 4.181 ; 4.181 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; rgb[*]    ; vga_sync:vga_sync_dev|clk_div ; 4.844 ; 4.844 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[0]   ; vga_sync:vga_sync_dev|clk_div ; 5.066 ; 5.066 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[1]   ; vga_sync:vga_sync_dev|clk_div ; 5.403 ; 5.403 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[2]   ; vga_sync:vga_sync_dev|clk_div ; 5.481 ; 5.481 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[3]   ; vga_sync:vga_sync_dev|clk_div ; 4.844 ; 4.844 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[4]   ; vga_sync:vga_sync_dev|clk_div ; 4.966 ; 4.966 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[5]   ; vga_sync:vga_sync_dev|clk_div ; 5.753 ; 5.753 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[6]   ; vga_sync:vga_sync_dev|clk_div ; 5.714 ; 5.714 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[7]   ; vga_sync:vga_sync_dev|clk_div ; 5.677 ; 5.677 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[8]   ; vga_sync:vga_sync_dev|clk_div ; 5.140 ; 5.140 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[9]   ; vga_sync:vga_sync_dev|clk_div ; 5.643 ; 5.643 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[10]  ; vga_sync:vga_sync_dev|clk_div ; 5.484 ; 5.484 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+;  rgb[11]  ; vga_sync:vga_sync_dev|clk_div ; 4.992 ; 4.992 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
+; vsync     ; vga_sync:vga_sync_dev|clk_div ; 3.992 ; 3.992 ; Rise       ; vga_sync:vga_sync_dev|clk_div ;
 +-----------+-------------------------------+-------+-------+------------+-------------------------------+
 
 
@@ -1018,7 +1060,7 @@ No paths to report.
 ; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------+-------------------------------+----------+----------+----------+----------+
 ; vga_sync:vga_sync_dev|clk_div ; clk                           ; 1        ; 1        ; 0        ; 0        ;
-; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 516      ; 0        ; 0        ; 0        ;
+; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 529      ; 0        ; 0        ; 0        ;
 +-------------------------------+-------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1029,7 +1071,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------+-------------------------------+----------+----------+----------+----------+
 ; vga_sync:vga_sync_dev|clk_div ; clk                           ; 1        ; 1        ; 0        ; 0        ;
-; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 516      ; 0        ; 0        ; 0        ;
+; vga_sync:vga_sync_dev|clk_div ; vga_sync:vga_sync_dev|clk_div ; 529      ; 0        ; 0        ; 0        ;
 +-------------------------------+-------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1055,8 +1097,8 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
 ; Unconstrained Input Port Paths  ; 22    ; 22   ;
-; Unconstrained Output Ports      ; 6     ; 6    ;
-; Unconstrained Output Port Paths ; 14    ; 14   ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 242   ; 242  ;
 +---------------------------------+-------+------+
 
 
@@ -1064,12 +1106,12 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; TimeQuest Timing Analyzer Messages ;
 +------------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 13 03:29:07 2015
+    Info: Processing started: Sun Apr 12 19:56:06 2020
 Info: Command: quartus_sta vga_test -c vga_test
 Info: qsta_default_script.tcl version: #1
-Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'vga_test.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1080,10 +1122,10 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.515
+Info (332146): Worst-case setup slack is -2.353
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -2.515       -43.754 vga_sync:vga_sync_dev|clk_div 
+    Info (332119):    -2.353       -47.240 vga_sync:vga_sync_dev|clk_div 
     Info (332119):     2.116         0.000 clk 
 Info (332146): Worst-case hold slack is -1.864
     Info (332119):     Slack End Point TNS Clock 
@@ -1100,10 +1142,10 @@ Info (332146): Worst-case minimum pulse width slack is -1.631
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.479
+Info (332146): Worst-case setup slack is -0.371
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.479        -4.679 vga_sync:vga_sync_dev|clk_div 
+    Info (332119):    -0.371        -5.451 vga_sync:vga_sync_dev|clk_div 
     Info (332119):     1.343         0.000 clk 
 Info (332146): Worst-case hold slack is -0.963
     Info (332119):     Slack End Point TNS Clock 
@@ -1120,10 +1162,10 @@ Info (332146): Worst-case minimum pulse width slack is -1.380
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 351 megabytes
-    Info: Processing ended: Tue Oct 13 03:29:09 2015
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 580 megabytes
+    Info: Processing ended: Sun Apr 12 19:56:15 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:08
 
 

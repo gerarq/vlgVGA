@@ -1,0 +1,15 @@
+module pixel_gen
+(
+input wire rst,
+input wire [9:0]x_pxl,y_pxl,
+output wire [11:0]rgb
+);
+//RGB12[(x_pxl*4'd3)+(12'd354*y_pxl)],RGB12[(x_pxl*4'd3)+(12'd354*y_pxl)+4'd1],RGB12[(x_pxl*4'd3)+(12'd354*y_pxl)+4'd2]
+//101952'h...
+reg  [3:0] RGB12[25487:0]='{4'h0};
+//118x72 del_orean.png
+assign rgb = (x_pxl == 10'b1111111111 || y_pxl == 10'b1111111111) ? {24{1'b0}} :
+				 ((x_pxl<=10'd117 && y_pxl<=10'd71 && RGB12[1]==4'hF) ? {RGB12[(x_pxl*4'd3)+(12'd354*y_pxl)],RGB12[0],RGB12[0]}:
+				 12'h999);
+
+endmodule

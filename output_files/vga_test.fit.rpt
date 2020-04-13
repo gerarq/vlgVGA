@@ -1,6 +1,6 @@
 Fitter report for vga_test
-Tue Oct 13 03:29:03 2015
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Sun Apr 12 19:55:52 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -62,15 +62,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Oct 13 03:29:03 2015           ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Fitter Status                      ; Successful - Sun Apr 12 19:55:51 2020           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; vga_test                                        ;
 ; Top-level Entity Name              ; vga_driver                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 49 / 18,752 ( < 1 % )                           ;
-;     Total combinational functions  ; 49 / 18,752 ( < 1 % )                           ;
+; Total logic elements               ; 11,035 / 18,752 ( 59 % )                        ;
+;     Total combinational functions  ; 11,035 / 18,752 ( 59 % )                        ;
 ;     Dedicated logic registers      ; 23 / 18,752 ( < 1 % )                           ;
 ; Total registers                    ; 23                                              ;
 ; Total pins                         ; 16 / 315 ( 5 % )                                ;
@@ -132,22 +132,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------------------+--------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.40        ;
-; Maximum used               ; 2           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  40.0%      ;
-;     Processors 3-4         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +----------------------------------------------+
@@ -156,8 +149,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 93 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 93 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 11079 ( 0.00 % )   ;
+;     -- Achieved     ; 0 / 11079 ( 0.00 % )   ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -180,7 +173,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 90      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 11076   ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -188,126 +181,126 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/output_files/vga_test.pin.
+The pin-out file can be found in C:/Users/BakuKurae/Documents/Master/fpga/vga_barColor/output_files/vga_test.pin.
 
 
-+---------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                       ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Total logic elements                        ; 49 / 18,752 ( < 1 % ) ;
-;     -- Combinational with no register       ; 26                    ;
-;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 23                    ;
-;                                             ;                       ;
-; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 22                    ;
-;     -- 3 input functions                    ; 4                     ;
-;     -- <=2 input functions                  ; 23                    ;
-;     -- Register only                        ; 0                     ;
-;                                             ;                       ;
-; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 31                    ;
-;     -- arithmetic mode                      ; 18                    ;
-;                                             ;                       ;
-; Total registers*                            ; 23 / 19,649 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 23 / 18,752 ( < 1 % ) ;
-;     -- I/O registers                        ; 0 / 897 ( 0 % )       ;
-;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 4 / 1,172 ( < 1 % )   ;
-; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 16 / 315 ( 5 % )      ;
-;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
-;                                             ;                       ;
-; Global signals                              ; 1                     ;
-; M4Ks                                        ; 0 / 52 ( 0 % )        ;
-; Total block memory bits                     ; 0 / 239,616 ( 0 % )   ;
-; Total block memory implementation bits      ; 0 / 239,616 ( 0 % )   ;
-; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )        ;
-; PLLs                                        ; 0 / 4 ( 0 % )         ;
-; Global clocks                               ; 1 / 16 ( 6 % )        ;
-; JTAGs                                       ; 0 / 1 ( 0 % )         ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
-; Maximum fan-out                             ; 22                    ;
-; Highest non-global fan-out                  ; 22                    ;
-; Total fan-out                               ; 232                   ;
-; Average fan-out                             ; 2.52                  ;
-+---------------------------------------------+-----------------------+
++------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                          ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Total logic elements                        ; 11,035 / 18,752 ( 59 % ) ;
+;     -- Combinational with no register       ; 11012                    ;
+;     -- Register only                        ; 0                        ;
+;     -- Combinational with a register        ; 23                       ;
+;                                             ;                          ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 9597                     ;
+;     -- 3 input functions                    ; 1182                     ;
+;     -- <=2 input functions                  ; 256                      ;
+;     -- Register only                        ; 0                        ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 10980                    ;
+;     -- arithmetic mode                      ; 55                       ;
+;                                             ;                          ;
+; Total registers*                            ; 23 / 19,649 ( < 1 % )    ;
+;     -- Dedicated logic registers            ; 23 / 18,752 ( < 1 % )    ;
+;     -- I/O registers                        ; 0 / 897 ( 0 % )          ;
+;                                             ;                          ;
+; Total LABs:  partially or completely used   ; 725 / 1,172 ( 62 % )     ;
+; Virtual pins                                ; 0                        ;
+; I/O pins                                    ; 16 / 315 ( 5 % )         ;
+;     -- Clock pins                           ; 1 / 8 ( 13 % )           ;
+;                                             ;                          ;
+; Global signals                              ; 1                        ;
+; M4Ks                                        ; 0 / 52 ( 0 % )           ;
+; Total block memory bits                     ; 0 / 239,616 ( 0 % )      ;
+; Total block memory implementation bits      ; 0 / 239,616 ( 0 % )      ;
+; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )           ;
+; PLLs                                        ; 0 / 4 ( 0 % )            ;
+; Global clocks                               ; 1 / 16 ( 6 % )           ;
+; JTAGs                                       ; 0 / 1 ( 0 % )            ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )            ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )            ;
+; Average interconnect usage (total/H/V)      ; 17% / 16% / 18%          ;
+; Peak interconnect usage (total/H/V)         ; 33% / 31% / 35%          ;
+; Maximum fan-out                             ; 3108                     ;
+; Highest non-global fan-out                  ; 3107                     ;
+; Total fan-out                               ; 42536                    ;
+; Average fan-out                             ; 3.84                     ;
++---------------------------------------------+--------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                         ;
-+---------------------------------------------+----------------------+--------------------------------+
-; Statistic                                   ; Top                  ; hard_block:auto_generated_inst ;
-+---------------------------------------------+----------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low                  ; Low                            ;
-;                                             ;                      ;                                ;
-; Total logic elements                        ; 49 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 26                   ; 0                              ;
-;     -- Register only                        ; 0                    ; 0                              ;
-;     -- Combinational with a register        ; 23                   ; 0                              ;
-;                                             ;                      ;                                ;
-; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 22                   ; 0                              ;
-;     -- 3 input functions                    ; 4                    ; 0                              ;
-;     -- <=2 input functions                  ; 23                   ; 0                              ;
-;     -- Register only                        ; 0                    ; 0                              ;
-;                                             ;                      ;                                ;
-; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 31                   ; 0                              ;
-;     -- arithmetic mode                      ; 18                   ; 0                              ;
-;                                             ;                      ;                                ;
-; Total registers                             ; 23                   ; 0                              ;
-;     -- Dedicated logic registers            ; 23 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
-;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 4 / 1172 ( < 1 % )   ; 0 / 1172 ( 0 % )               ;
-;                                             ;                      ;                                ;
-; Virtual pins                                ; 0                    ; 0                              ;
-; I/O pins                                    ; 16                   ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )       ; 0 / 52 ( 0 % )                 ;
-; Total memory bits                           ; 0                    ; 0                              ;
-; Total RAM block bits                        ; 0                    ; 0                              ;
-; Clock control block                         ; 1 / 20 ( 5 % )       ; 0 / 20 ( 0 % )                 ;
-;                                             ;                      ;                                ;
-; Connections                                 ;                      ;                                ;
-;     -- Input Connections                    ; 0                    ; 0                              ;
-;     -- Registered Input Connections         ; 0                    ; 0                              ;
-;     -- Output Connections                   ; 0                    ; 0                              ;
-;     -- Registered Output Connections        ; 0                    ; 0                              ;
-;                                             ;                      ;                                ;
-; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 232                  ; 0                              ;
-;     -- Registered Connections               ; 81                   ; 0                              ;
-;                                             ;                      ;                                ;
-; External Connections                        ;                      ;                                ;
-;     -- Top                                  ; 0                    ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
-;                                             ;                      ;                                ;
-; Partition Interface                         ;                      ;                                ;
-;     -- Input Ports                          ; 2                    ; 0                              ;
-;     -- Output Ports                         ; 14                   ; 0                              ;
-;     -- Bidir Ports                          ; 0                    ; 0                              ;
-;                                             ;                      ;                                ;
-; Registered Ports                            ;                      ;                                ;
-;     -- Registered Input Ports               ; 0                    ; 0                              ;
-;     -- Registered Output Ports              ; 0                    ; 0                              ;
-;                                             ;                      ;                                ;
-; Port Connectivity                           ;                      ;                                ;
-;     -- Input Ports driven by GND            ; 0                    ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                    ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                    ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                    ; 0                              ;
-;     -- Input Ports with no Source           ; 0                    ; 0                              ;
-;     -- Output Ports with no Source          ; 0                    ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                    ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                    ; 0                              ;
-+---------------------------------------------+----------------------+--------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                           ;
++---------------------------------------------+------------------------+--------------------------------+
+; Statistic                                   ; Top                    ; hard_block:auto_generated_inst ;
++---------------------------------------------+------------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                    ; Low                            ;
+;                                             ;                        ;                                ;
+; Total logic elements                        ; 11035 / 18752 ( 59 % ) ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 11012                  ; 0                              ;
+;     -- Register only                        ; 0                      ; 0                              ;
+;     -- Combinational with a register        ; 23                     ; 0                              ;
+;                                             ;                        ;                                ;
+; Logic element usage by number of LUT inputs ;                        ;                                ;
+;     -- 4 input functions                    ; 9597                   ; 0                              ;
+;     -- 3 input functions                    ; 1182                   ; 0                              ;
+;     -- <=2 input functions                  ; 256                    ; 0                              ;
+;     -- Register only                        ; 0                      ; 0                              ;
+;                                             ;                        ;                                ;
+; Logic elements by mode                      ;                        ;                                ;
+;     -- normal mode                          ; 10980                  ; 0                              ;
+;     -- arithmetic mode                      ; 55                     ; 0                              ;
+;                                             ;                        ;                                ;
+; Total registers                             ; 23                     ; 0                              ;
+;     -- Dedicated logic registers            ; 23 / 18752 ( < 1 % )   ; 0 / 18752 ( 0 % )              ;
+;                                             ;                        ;                                ;
+; Total LABs:  partially or completely used   ; 725 / 1172 ( 62 % )    ; 0 / 1172 ( 0 % )               ;
+;                                             ;                        ;                                ;
+; Virtual pins                                ; 0                      ; 0                              ;
+; I/O pins                                    ; 16                     ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )         ; 0 / 52 ( 0 % )                 ;
+; Total memory bits                           ; 0                      ; 0                              ;
+; Total RAM block bits                        ; 0                      ; 0                              ;
+; Clock control block                         ; 1 / 20 ( 5 % )         ; 0 / 20 ( 0 % )                 ;
+;                                             ;                        ;                                ;
+; Connections                                 ;                        ;                                ;
+;     -- Input Connections                    ; 0                      ; 0                              ;
+;     -- Registered Input Connections         ; 0                      ; 0                              ;
+;     -- Output Connections                   ; 0                      ; 0                              ;
+;     -- Registered Output Connections        ; 0                      ; 0                              ;
+;                                             ;                        ;                                ;
+; Internal Connections                        ;                        ;                                ;
+;     -- Total Connections                    ; 42536                  ; 0                              ;
+;     -- Registered Connections               ; 218                    ; 0                              ;
+;                                             ;                        ;                                ;
+; External Connections                        ;                        ;                                ;
+;     -- Top                                  ; 0                      ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                      ; 0                              ;
+;                                             ;                        ;                                ;
+; Partition Interface                         ;                        ;                                ;
+;     -- Input Ports                          ; 2                      ; 0                              ;
+;     -- Output Ports                         ; 14                     ; 0                              ;
+;     -- Bidir Ports                          ; 0                      ; 0                              ;
+;                                             ;                        ;                                ;
+; Registered Ports                            ;                        ;                                ;
+;     -- Registered Input Ports               ; 0                      ; 0                              ;
+;     -- Registered Output Ports              ; 0                      ; 0                              ;
+;                                             ;                        ;                                ;
+; Port Connectivity                           ;                        ;                                ;
+;     -- Input Ports driven by GND            ; 0                      ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                      ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                      ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                      ; 0                              ;
+;     -- Input Ports with no Source           ; 0                      ; 0                              ;
+;     -- Output Ports with no Source          ; 0                      ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                      ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                      ; 0                              ;
++---------------------------------------------+------------------------+--------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -888,15 +881,23 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                             ;
-+------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------+--------------+
-; Compilation Hierarchy Node   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                 ; Library Name ;
-+------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------+--------------+
-; |vga_driver                  ; 49 (0)      ; 23 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 16   ; 0            ; 26 (0)       ; 0 (0)             ; 23 (0)           ; |vga_driver                         ; work         ;
-;    |pixel_gen:pixel_gen_dev| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |vga_driver|pixel_gen:pixel_gen_dev ; work         ;
-;    |vga_sync:vga_sync_dev|   ; 48 (48)     ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 23 (23)          ; |vga_driver|vga_sync:vga_sync_dev   ; work         ;
-+------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------------------------------------------+---------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+---------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                        ; Logic Cells   ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs  ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                        ; Library Name ;
++---------------------------------------------------+---------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+---------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |vga_driver                                       ; 11035 (0)     ; 23 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 16   ; 0            ; 11012 (0)     ; 0 (0)             ; 23 (0)           ; |vga_driver                                                                                                                                                ; work         ;
+;    |pixel_gen:pixel_gen_dev|                      ; 10965 (10930) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10965 (10930) ; 0 (0)             ; 0 (0)            ; |vga_driver|pixel_gen:pixel_gen_dev                                                                                                                        ; work         ;
+;       |lpm_mult:Mult1|                            ; 35 (0)        ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 35 (0)        ; 0 (0)             ; 0 (0)            ; |vga_driver|pixel_gen:pixel_gen_dev|lpm_mult:Mult1                                                                                                         ; work         ;
+;          |multcore:mult_core|                     ; 35 (19)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 35 (19)       ; 0 (0)             ; 0 (0)            ; |vga_driver|pixel_gen:pixel_gen_dev|lpm_mult:Mult1|multcore:mult_core                                                                                      ; work         ;
+;             |mpar_add:padder|                     ; 16 (0)        ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)        ; 0 (0)             ; 0 (0)            ; |vga_driver|pixel_gen:pixel_gen_dev|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
+;                |lpm_add_sub:adder[0]|             ; 10 (0)        ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (0)        ; 0 (0)             ; 0 (0)            ; |vga_driver|pixel_gen:pixel_gen_dev|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
+;                   |add_sub_4ch:auto_generated|    ; 10 (10)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)       ; 0 (0)             ; 0 (0)            ; |vga_driver|pixel_gen:pixel_gen_dev|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_4ch:auto_generated                      ; work         ;
+;                |mpar_add:sub_par_add|             ; 6 (0)         ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)         ; 0 (0)             ; 0 (0)            ; |vga_driver|pixel_gen:pixel_gen_dev|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 6 (0)         ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)         ; 0 (0)             ; 0 (0)            ; |vga_driver|pixel_gen:pixel_gen_dev|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
+;                      |add_sub_8ch:auto_generated| ; 6 (6)         ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)         ; 0 (0)             ; 0 (0)            ; |vga_driver|pixel_gen:pixel_gen_dev|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_8ch:auto_generated ; work         ;
+;    |vga_sync:vga_sync_dev|                        ; 70 (70)       ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 47 (47)       ; 0 (0)             ; 23 (23)          ; |vga_driver|vga_sync:vga_sync_dev                                                                                                                          ; work         ;
++---------------------------------------------------+---------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+---------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -932,26 +933,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rst                                    ;                   ;         ;
 ;      - vga_sync:vga_sync_dev|vsync     ; 0                 ; 6       ;
 ;      - vga_sync:vga_sync_dev|href      ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|vcount[7] ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|vcount[4] ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|vcount[5] ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|vcount[6] ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|vcount[8] ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|vcount[9] ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|vcount[0] ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|vcount[3] ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|vcount[2] ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|vcount[1] ; 0                 ; 6       ;
 ;      - vga_sync:vga_sync_dev|hcount[7] ; 0                 ; 6       ;
 ;      - vga_sync:vga_sync_dev|hcount[8] ; 0                 ; 6       ;
 ;      - vga_sync:vga_sync_dev|hcount[9] ; 0                 ; 6       ;
 ;      - vga_sync:vga_sync_dev|hcount[6] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|hcount[5] ; 0                 ; 6       ;
 ;      - vga_sync:vga_sync_dev|hcount[4] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|hcount[3] ; 0                 ; 6       ;
 ;      - vga_sync:vga_sync_dev|hcount[2] ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|hcount[3] ; 0                 ; 6       ;
 ;      - vga_sync:vga_sync_dev|hcount[1] ; 0                 ; 6       ;
+;      - vga_sync:vga_sync_dev|hcount[5] ; 0                 ; 6       ;
 ;      - vga_sync:vga_sync_dev|hcount[0] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|vcount[9] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|vcount[8] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|vcount[7] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|vcount[6] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|vcount[4] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|vcount[2] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|vcount[5] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|vcount[3] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|vcount[1] ; 0                 ; 6       ;
-;      - vga_sync:vga_sync_dev|vcount[0] ; 0                 ; 6       ;
 ; clk                                    ;                   ;         ;
 +----------------------------------------+-------------------+---------+
 
@@ -963,255 +964,1176 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clk                               ; PIN_L1            ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; rst                               ; PIN_T21           ; 22      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; vga_sync:vga_sync_dev|LessThan1~0 ; LCCOMB_X49_Y9_N26 ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; vga_sync:vga_sync_dev|clk_div     ; LCFF_X1_Y13_N29   ; 22      ; Clock        ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; vga_sync:vga_sync_dev|vcount[9]~3 ; LCCOMB_X48_Y9_N2  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; vga_sync:vga_sync_dev|LessThan1~0 ; LCCOMB_X5_Y19_N24 ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; vga_sync:vga_sync_dev|clk_div     ; LCFF_X1_Y13_N1    ; 22      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; vga_sync:vga_sync_dev|vcount[7]~2 ; LCCOMB_X4_Y19_N6  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +-----------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                     ;
-+-------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
-; Name                          ; Location        ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
-; vga_sync:vga_sync_dev|clk_div ; LCFF_X1_Y13_N29 ; 22      ; Global Clock         ; GCLK1            ; --                        ;
-+-------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                    ;
++-------------------------------+----------------+---------+----------------------+------------------+---------------------------+
+; Name                          ; Location       ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------+----------------+---------+----------------------+------------------+---------------------------+
+; vga_sync:vga_sync_dev|clk_div ; LCFF_X1_Y13_N1 ; 22      ; Global Clock         ; GCLK3            ; --                        ;
++-------------------------------+----------------+---------+----------------------+------------------+---------------------------+
 
 
-+----------------------------------------------+
-; Non-Global High Fan-Out Signals              ;
-+------------------------------------+---------+
-; Name                               ; Fan-Out ;
-+------------------------------------+---------+
-; rst                                ; 22      ;
-; vga_sync:vga_sync_dev|always1~3    ; 11      ;
-; vga_sync:vga_sync_dev|vcount[9]    ; 10      ;
-; vga_sync:vga_sync_dev|LessThan1~0  ; 10      ;
-; vga_sync:vga_sync_dev|Add1~21      ; 6       ;
-; vga_sync:vga_sync_dev|LessThan3~1  ; 5       ;
-; vga_sync:vga_sync_dev|vcount[4]    ; 5       ;
-; vga_sync:vga_sync_dev|vcount[9]~3  ; 4       ;
-; vga_sync:vga_sync_dev|vcount[5]    ; 4       ;
-; vga_sync:vga_sync_dev|vcount[6]    ; 4       ;
-; vga_sync:vga_sync_dev|vcount[7]    ; 4       ;
-; vga_sync:vga_sync_dev|vcount[8]    ; 4       ;
-; pixel_gen:pixel_gen_dev|WideAnd0~0 ; 4       ;
-; vga_sync:vga_sync_dev|hcount[0]    ; 4       ;
-; vga_sync:vga_sync_dev|hcount[8]    ; 4       ;
-; vga_sync:vga_sync_dev|hcount[7]    ; 4       ;
-; vga_sync:vga_sync_dev|hcount[9]    ; 4       ;
-; vga_sync:vga_sync_dev|vcount[0]    ; 3       ;
-; vga_sync:vga_sync_dev|vcount[1]    ; 3       ;
-; vga_sync:vga_sync_dev|vcount[3]    ; 3       ;
-; vga_sync:vga_sync_dev|vcount[2]    ; 3       ;
-; vga_sync:vga_sync_dev|hcount[1]    ; 3       ;
-; vga_sync:vga_sync_dev|hcount[2]    ; 3       ;
-; vga_sync:vga_sync_dev|hcount[3]    ; 3       ;
-; vga_sync:vga_sync_dev|hcount[4]    ; 3       ;
-; vga_sync:vga_sync_dev|hcount[5]    ; 3       ;
-; vga_sync:vga_sync_dev|hcount[6]    ; 3       ;
-; vga_sync:vga_sync_dev|Add1~20      ; 2       ;
-; vga_sync:vga_sync_dev|LessThan3~0  ; 2       ;
-; vga_sync:vga_sync_dev|always1~2    ; 2       ;
-; vga_sync:vga_sync_dev|always1~1    ; 2       ;
-; vga_sync:vga_sync_dev|always1~0    ; 2       ;
-; clk                                ; 1       ;
-; vga_sync:vga_sync_dev|clk_div~0    ; 1       ;
-; vga_sync:vga_sync_dev|Add1~28      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~27      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~26      ; 1       ;
-; vga_sync:vga_sync_dev|vcount[5]~4  ; 1       ;
-; vga_sync:vga_sync_dev|Add1~25      ; 1       ;
-; vga_sync:vga_sync_dev|vcount[4]~2  ; 1       ;
-; vga_sync:vga_sync_dev|vcount[6]~1  ; 1       ;
-; vga_sync:vga_sync_dev|vcount[7]~0  ; 1       ;
-; vga_sync:vga_sync_dev|Add1~24      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~23      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~22      ; 1       ;
-; vga_sync:vga_sync_dev|always2~5    ; 1       ;
-; vga_sync:vga_sync_dev|always2~4    ; 1       ;
-; vga_sync:vga_sync_dev|always2~3    ; 1       ;
-; vga_sync:vga_sync_dev|always2~2    ; 1       ;
-; vga_sync:vga_sync_dev|always2~1    ; 1       ;
-; vga_sync:vga_sync_dev|always2~0    ; 1       ;
-; vga_sync:vga_sync_dev|clk_div      ; 1       ;
-; vga_sync:vga_sync_dev|vsync        ; 1       ;
-; vga_sync:vga_sync_dev|href         ; 1       ;
-; vga_sync:vga_sync_dev|Add1~18      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~17      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~16      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~15      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~14      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~13      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~12      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~11      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~10      ; 1       ;
-; vga_sync:vga_sync_dev|Add1~9       ; 1       ;
-; vga_sync:vga_sync_dev|Add1~8       ; 1       ;
-; vga_sync:vga_sync_dev|Add1~7       ; 1       ;
-; vga_sync:vga_sync_dev|Add1~6       ; 1       ;
-; vga_sync:vga_sync_dev|Add1~5       ; 1       ;
-; vga_sync:vga_sync_dev|Add1~4       ; 1       ;
-; vga_sync:vga_sync_dev|Add1~3       ; 1       ;
-; vga_sync:vga_sync_dev|Add1~2       ; 1       ;
-; vga_sync:vga_sync_dev|Add1~1       ; 1       ;
-; vga_sync:vga_sync_dev|Add1~0       ; 1       ;
-; vga_sync:vga_sync_dev|hcount[9]~28 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[8]~27 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[8]~26 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[7]~25 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[7]~24 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[6]~23 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[6]~22 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[5]~21 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[5]~20 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[4]~19 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[4]~18 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[3]~17 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[3]~16 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[2]~15 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[2]~14 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[1]~13 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[1]~12 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[0]~11 ; 1       ;
-; vga_sync:vga_sync_dev|hcount[0]~10 ; 1       ;
-+------------------------------------+---------+
++-------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                     ;
++---------------------------------------------------------------------------+---------+
+; Name                                                                      ; Fan-Out ;
++---------------------------------------------------------------------------+---------+
+; pixel_gen:pixel_gen_dev|Add3~0                                            ; 3107    ;
+; pixel_gen:pixel_gen_dev|Add3~4                                            ; 2797    ;
+; pixel_gen:pixel_gen_dev|Add3~8                                            ; 2741    ;
+; pixel_gen:pixel_gen_dev|Add3~6                                            ; 2675    ;
+; pixel_gen:pixel_gen_dev|Mux6~2                                            ; 2662    ;
+; pixel_gen:pixel_gen_dev|Add3~2                                            ; 2363    ;
+; pixel_gen:pixel_gen_dev|Add3~10                                           ; 2177    ;
+; pixel_gen:pixel_gen_dev|Add3~12                                           ; 2020    ;
+; pixel_gen:pixel_gen_dev|Add3~14                                           ; 1996    ;
+; pixel_gen:pixel_gen_dev|Add3~16                                           ; 1435    ;
+; pixel_gen:pixel_gen_dev|Add3~18                                           ; 1334    ;
+; pixel_gen:pixel_gen_dev|Add3~22                                           ; 626     ;
+; pixel_gen:pixel_gen_dev|Add3~20                                           ; 256     ;
+; pixel_gen:pixel_gen_dev|Mux9~6                                            ; 83      ;
+; pixel_gen:pixel_gen_dev|Mux11~656                                         ; 70      ;
+; pixel_gen:pixel_gen_dev|Mux11~440                                         ; 69      ;
+; pixel_gen:pixel_gen_dev|Mux9~7                                            ; 67      ;
+; pixel_gen:pixel_gen_dev|Add3~26                                           ; 64      ;
+; pixel_gen:pixel_gen_dev|Mux7~9                                            ; 60      ;
+; pixel_gen:pixel_gen_dev|Mux11~90                                          ; 60      ;
+; pixel_gen:pixel_gen_dev|Mux7~11                                           ; 59      ;
+; pixel_gen:pixel_gen_dev|Mux7~12                                           ; 54      ;
+; pixel_gen:pixel_gen_dev|Mux5~10                                           ; 53      ;
+; pixel_gen:pixel_gen_dev|Mux11~370                                         ; 52      ;
+; pixel_gen:pixel_gen_dev|Mux11~95                                          ; 52      ;
+; pixel_gen:pixel_gen_dev|Mux11~896                                         ; 48      ;
+; pixel_gen:pixel_gen_dev|Mux6~7                                            ; 44      ;
+; pixel_gen:pixel_gen_dev|Mux11~1202                                        ; 43      ;
+; pixel_gen:pixel_gen_dev|Mux11~454                                         ; 43      ;
+; pixel_gen:pixel_gen_dev|Mux5~12                                           ; 42      ;
+; pixel_gen:pixel_gen_dev|Mux11~647                                         ; 34      ;
+; pixel_gen:pixel_gen_dev|Mux11~131                                         ; 34      ;
+; pixel_gen:pixel_gen_dev|Mux11~570                                         ; 33      ;
+; pixel_gen:pixel_gen_dev|Mux11~653                                         ; 31      ;
+; pixel_gen:pixel_gen_dev|Mux11~572                                         ; 31      ;
+; pixel_gen:pixel_gen_dev|Mux11~208                                         ; 30      ;
+; pixel_gen:pixel_gen_dev|Mux10~5                                           ; 29      ;
+; vga_sync:vga_sync_dev|vcount[9]                                           ; 29      ;
+; pixel_gen:pixel_gen_dev|Mux5~14                                           ; 28      ;
+; pixel_gen:pixel_gen_dev|Mux11~648                                         ; 28      ;
+; pixel_gen:pixel_gen_dev|Mux11~92                                          ; 28      ;
+; pixel_gen:pixel_gen_dev|Mux11~893                                         ; 27      ;
+; pixel_gen:pixel_gen_dev|Mux11~439                                         ; 26      ;
+; pixel_gen:pixel_gen_dev|Mux11~299                                         ; 26      ;
+; pixel_gen:pixel_gen_dev|Mux11~267                                         ; 26      ;
+; pixel_gen:pixel_gen_dev|Mux10~390                                         ; 25      ;
+; pixel_gen:pixel_gen_dev|Mux10~9                                           ; 25      ;
+; pixel_gen:pixel_gen_dev|Mux10~40                                          ; 24      ;
+; pixel_gen:pixel_gen_dev|Mux11~869                                         ; 24      ;
+; pixel_gen:pixel_gen_dev|Mux11~548                                         ; 24      ;
+; pixel_gen:pixel_gen_dev|Mux11~115                                         ; 24      ;
+; pixel_gen:pixel_gen_dev|Mux10~53                                          ; 23      ;
+; rst                                                                       ; 22      ;
+; pixel_gen:pixel_gen_dev|Mux9~209                                          ; 22      ;
+; pixel_gen:pixel_gen_dev|Mux10~851                                         ; 22      ;
+; pixel_gen:pixel_gen_dev|Mux10~338                                         ; 21      ;
+; pixel_gen:pixel_gen_dev|Mux11~868                                         ; 21      ;
+; pixel_gen:pixel_gen_dev|Mux11~650                                         ; 21      ;
+; pixel_gen:pixel_gen_dev|Mux11~450                                         ; 21      ;
+; pixel_gen:pixel_gen_dev|Mux11~132                                         ; 21      ;
+; pixel_gen:pixel_gen_dev|Mux9~645                                          ; 20      ;
+; pixel_gen:pixel_gen_dev|Mux11~453                                         ; 20      ;
+; pixel_gen:pixel_gen_dev|Mux11~236                                         ; 20      ;
+; pixel_gen:pixel_gen_dev|Mux7~6                                            ; 20      ;
+; vga_sync:vga_sync_dev|LessThan9~0                                         ; 20      ;
+; pixel_gen:pixel_gen_dev|Mux11~264                                         ; 19      ;
+; pixel_gen:pixel_gen_dev|Mux11~216                                         ; 19      ;
+; vga_sync:vga_sync_dev|vcount[5]                                           ; 19      ;
+; vga_sync:vga_sync_dev|hcount[0]                                           ; 18      ;
+; vga_sync:vga_sync_dev|hcount[9]                                           ; 18      ;
+; pixel_gen:pixel_gen_dev|Mux11~554                                         ; 17      ;
+; pixel_gen:pixel_gen_dev|Mux11~265                                         ; 17      ;
+; pixel_gen:pixel_gen_dev|Mux11~134                                         ; 17      ;
+; pixel_gen:pixel_gen_dev|Mux11~88                                          ; 17      ;
+; pixel_gen:pixel_gen_dev|Mux10~11                                          ; 16      ;
+; pixel_gen:pixel_gen_dev|Mux11~966                                         ; 16      ;
+; pixel_gen:pixel_gen_dev|Mux11~210                                         ; 16      ;
+; vga_sync:vga_sync_dev|hcount[8]                                           ; 16      ;
+; pixel_gen:pixel_gen_dev|Mux10~299                                         ; 15      ;
+; pixel_gen:pixel_gen_dev|Mux5~17                                           ; 15      ;
+; pixel_gen:pixel_gen_dev|Mux10~6                                           ; 15      ;
+; pixel_gen:pixel_gen_dev|Mux11~285                                         ; 15      ;
+; pixel_gen:pixel_gen_dev|Mux11~209                                         ; 15      ;
+; vga_sync:vga_sync_dev|hcount[7]                                           ; 15      ;
+; pixel_gen:pixel_gen_dev|Mux11~711                                         ; 14      ;
+; pixel_gen:pixel_gen_dev|Mux11~686                                         ; 14      ;
+; pixel_gen:pixel_gen_dev|Mux11~575                                         ; 14      ;
+; pixel_gen:pixel_gen_dev|Mux11~260                                         ; 14      ;
+; pixel_gen:pixel_gen_dev|Mux11~253                                         ; 14      ;
+; pixel_gen:pixel_gen_dev|Mux11~89                                          ; 14      ;
+; pixel_gen:pixel_gen_dev|Add3~24                                           ; 14      ;
+; pixel_gen:pixel_gen_dev|Mux10~68                                          ; 13      ;
+; pixel_gen:pixel_gen_dev|Mux11~1110                                        ; 13      ;
+; pixel_gen:pixel_gen_dev|Mux11~1092                                        ; 13      ;
+; pixel_gen:pixel_gen_dev|Mux11~739                                         ; 13      ;
+; pixel_gen:pixel_gen_dev|Mux11~597                                         ; 13      ;
+; pixel_gen:pixel_gen_dev|Mux11~577                                         ; 13      ;
+; pixel_gen:pixel_gen_dev|Mux11~278                                         ; 13      ;
+; pixel_gen:pixel_gen_dev|Mux11~215                                         ; 13      ;
+; pixel_gen:pixel_gen_dev|Mux5~11                                           ; 13      ;
+; pixel_gen:pixel_gen_dev|Mux9~278                                          ; 12      ;
+; pixel_gen:pixel_gen_dev|Mux10~56                                          ; 12      ;
+; pixel_gen:pixel_gen_dev|Mux8~8                                            ; 12      ;
+; pixel_gen:pixel_gen_dev|Mux11~214                                         ; 12      ;
+; pixel_gen:pixel_gen_dev|Mux11~212                                         ; 12      ;
+; pixel_gen:pixel_gen_dev|Mux11~169                                         ; 12      ;
+; pixel_gen:pixel_gen_dev|Mux11~86                                          ; 12      ;
+; pixel_gen:pixel_gen_dev|Mux11~775                                         ; 11      ;
+; pixel_gen:pixel_gen_dev|Mux11~599                                         ; 11      ;
+; pixel_gen:pixel_gen_dev|Mux11~568                                         ; 11      ;
+; pixel_gen:pixel_gen_dev|Mux11~484                                         ; 11      ;
+; pixel_gen:pixel_gen_dev|Mux11~307                                         ; 11      ;
+; pixel_gen:pixel_gen_dev|Mux11~281                                         ; 11      ;
+; pixel_gen:pixel_gen_dev|Mux8~6                                            ; 11      ;
+; vga_sync:vga_sync_dev|LessThan8~1                                         ; 11      ;
+; vga_sync:vga_sync_dev|vcount[6]                                           ; 11      ;
+; vga_sync:vga_sync_dev|LessThan1~0                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux8~630                                          ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux10~785                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~1173                                        ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~967                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~894                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~831                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~766                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~596                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~555                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~530                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~419                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~391                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~286                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~263                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~254                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux11~120                                         ; 10      ;
+; pixel_gen:pixel_gen_dev|Mux5~8                                            ; 10      ;
+; vga_sync:vga_sync_dev|LessThan3~1                                         ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux9~535                                          ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux10~599                                         ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux10~291                                         ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux9~8                                            ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux11~1206                                        ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux5~16                                           ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux11~1181                                        ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux11~1044                                        ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux6~6                                            ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux11~816                                         ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux11~806                                         ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux5~13                                           ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux11~605                                         ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux11~557                                         ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux11~326                                         ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux11~258                                         ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux11~256                                         ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux2~22                                           ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux11~99                                          ; 9       ;
+; vga_sync:vga_sync_dev|vcount[2]                                           ; 9       ;
+; vga_sync:vga_sync_dev|vcount[3]                                           ; 9       ;
+; pixel_gen:pixel_gen_dev|Mux7~273                                          ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux9~509                                          ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux9~420                                          ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux9~78                                           ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux10~720                                         ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux7~15                                           ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux10~376                                         ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux10~182                                         ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux10~58                                          ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux11~1138                                        ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux11~1104                                        ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux11~609                                         ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux8~9                                            ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux7~10                                           ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux11~416                                         ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux11~327                                         ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux11~279                                         ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux11~237                                         ; 8       ;
+; pixel_gen:pixel_gen_dev|Mux11~144                                         ; 8       ;
+; vga_sync:vga_sync_dev|vcount[1]                                           ; 8       ;
+; vga_sync:vga_sync_dev|vcount[7]                                           ; 8       ;
+; vga_sync:vga_sync_dev|always1~5                                           ; 7       ;
+; vga_sync:vga_sync_dev|always1~0                                           ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux8~647                                          ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux7~490                                          ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~1332                                        ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux10~1037                                        ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux9~603                                          ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux9~391                                          ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux9~311                                          ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux5~21                                           ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux9~76                                           ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux10~969                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux10~761                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux10~719                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux10~463                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux10~433                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux10~366                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux10~334                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux10~224                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux10~106                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~1157                                        ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~1145                                        ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~1127                                        ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~972                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~803                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~627                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~615                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~584                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~486                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~393                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~389                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~360                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~331                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~311                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux4~8                                            ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~241                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~229                                         ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~98                                          ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux6~3                                            ; 7       ;
+; vga_sync:vga_sync_dev|vcount[0]                                           ; 7       ;
+; vga_sync:vga_sync_dev|LessThan8~0                                         ; 7       ;
+; vga_sync:vga_sync_dev|vcount[8]                                           ; 7       ;
+; vga_sync:vga_sync_dev|vcount[4]                                           ; 7       ;
+; vga_sync:vga_sync_dev|hcount[3]                                           ; 7       ;
+; pixel_gen:pixel_gen_dev|Mux11~1344                                        ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux6~125                                          ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux7~170                                          ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux9~900                                          ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~1330                                        ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux8~17                                           ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux9~874                                          ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux9~751                                          ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux9~539                                          ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux9~403                                          ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux9~220                                          ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~1324                                        ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux9~43                                           ; 6       ;
+; pixel_gen:pixel_gen_dev|rgb[10]~11                                        ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux10~1010                                        ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux5~20                                           ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux7~17                                           ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux5~19                                           ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux10~781                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux10~684                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux10~591                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux10~437                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux10~368                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux10~236                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux10~210                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux4~10                                           ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~1154                                        ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~1144                                        ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~1066                                        ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~1046                                        ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~1043                                        ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~1030                                        ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux7~14                                           ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~971                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~811                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~675                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~613                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~429                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~420                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~159                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux11~140                                         ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux8~7                                            ; 6       ;
+; vga_sync:vga_sync_dev|y_pxl[4]~3                                          ; 6       ;
+; vga_sync:vga_sync_dev|hcount[6]                                           ; 6       ;
+; pixel_gen:pixel_gen_dev|Mux6~917                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux5~279                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~1343                                        ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux6~704                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux6~139                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux7~1089                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux7~351                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux8~633                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux8~447                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux8~424                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux8~389                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux8~314                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux7~21                                           ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux8~69                                           ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~878                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~845                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux4~13                                           ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~781                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~758                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~541                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~515                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~453                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~442                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~417                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~357                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux7~18                                           ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~87                                           ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux3~13                                           ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux9~51                                           ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~919                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~822                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~645                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~641                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~418                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~312                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~225                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~190                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~163                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~1321                                        ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~80                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~75                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~73                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~30                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux10~13                                          ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~1247                                        ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~1240                                        ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~1229                                        ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~1212                                        ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~1211                                        ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~1160                                        ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~1099                                        ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~1078                                        ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~1025                                        ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~760                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~690                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~625                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~612                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~581                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~569                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~489                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~425                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~414                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~413                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~378                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~354                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~295                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~244                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux11~141                                         ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux5~9                                            ; 5       ;
+; pixel_gen:pixel_gen_dev|Mux5~7                                            ; 5       ;
+; vga_sync:vga_sync_dev|hcount[5]                                           ; 5       ;
+; vga_sync:vga_sync_dev|hcount[1]                                           ; 5       ;
+; vga_sync:vga_sync_dev|hcount[2]                                           ; 5       ;
+; vga_sync:vga_sync_dev|hcount[4]                                           ; 5       ;
+; vga_sync:vga_sync_dev|vcount[7]~2                                         ; 4       ;
+; vga_sync:vga_sync_dev|always1~4                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux3~916                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux7~1197                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux4~215                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux4~137                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux5~771                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~1345                                        ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux5~318                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~902                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux6~832                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux6~712                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux6~688                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~1341                                        ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux1~1                                            ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux6~544                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux8~648                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux6~132                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux6~85                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux6~15                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux7~1154                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~901                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux7~497                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux7~456                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux8~449                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux8~426                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~899                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux8~382                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux8~361                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux8~326                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux8~128                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~855                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~848                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux8~16                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~731                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux4~12                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~587                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~537                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~500                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~456                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~424                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~415                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~300                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~283                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~1033                                        ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~267                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~1032                                        ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~170                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~68                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~1024                                        ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~1013                                        ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~978                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~963                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~916                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~751                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~697                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~692                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~674                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux5~18                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~503                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~501                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~432                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~406                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~398                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~318                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux9~10                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~286                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~189                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~180                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~176                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~29                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux10~19                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux8~12                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~1213                                        ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~1128                                        ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~1052                                        ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux8~11                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux5~15                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|rgb[0]~8                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux7~13                                           ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~976                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~866                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~764                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~763                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~705                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~676                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~639                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~619                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~593                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~579                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~578                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~565                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux4~9                                            ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~494                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux7~8                                            ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~377                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~356                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~275                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~271                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~249                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~222                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~220                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~205                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~192                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~153                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~151                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~148                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~122                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~119                                         ; 4       ;
+; pixel_gen:pixel_gen_dev|Mux11~83                                          ; 4       ;
+; vga_sync:vga_sync_dev|y_pxl[6]~2                                          ; 4       ;
+; vga_sync:vga_sync_dev|y_pxl[5]~1                                          ; 4       ;
+; vga_sync:vga_sync_dev|y_pxl[7]~0                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|rgb[0]~5                                          ; 4       ;
+; pixel_gen:pixel_gen_dev|rgb~4                                             ; 4       ;
+; vga_sync:vga_sync_dev|always1~3                                           ; 3       ;
+; vga_sync:vga_sync_dev|LessThan3~0                                         ; 3       ;
+; vga_sync:vga_sync_dev|always1~1                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux0~556                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux2~831                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux2~27                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~1199                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux4~354                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1346                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux4~345                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux4~285                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux4~251                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux4~235                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux4~222                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~904                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~798                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~692                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~664                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~534                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~528                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~348                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~268                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~150                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~132                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~115                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~78                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~857                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~754                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~697                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~690                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~677                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~617                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~566                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~397                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~392                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~329                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~318                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~155                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~153                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~152                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~102                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~11                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~987                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~866                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~748                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~599                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1335                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~481                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~329                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~289                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~284                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~162                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~85                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~41                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~38                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~30                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~504                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~495                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~452                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~441                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~898                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~394                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~363                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~339                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~331                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~328                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~311                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~266                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1329                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1328                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~199                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~184                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~897                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~1036                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~108                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~95                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux5~23                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~881                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1327                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~827                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~819                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~800                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~796                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~756                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~752                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1326                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~704                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~680                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~663                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~10                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~621                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~609                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~607                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~513                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~1034                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~438                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux7~20                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~359                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~305                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~291                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~289                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~284                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~241                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~185                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~173                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~80                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~70                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~59                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~54                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~53                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1323                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~21                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~1023                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~976                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~973                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~936                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux4~11                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~831                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~830                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~11                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~748                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~746                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~698                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~672                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~642                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~623                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~548                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~457                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~14                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~355                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~350                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~327                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~317                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~230                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~227                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux9~9                                            ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~13                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~196                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~195                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~187                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~179                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~170                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~169                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~125                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~119                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~118                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~117                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~105                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~100                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~97                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~85                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux1~0                                            ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~62                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~44                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~36                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~8                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux0~9                                            ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1307                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1304                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1300                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1286                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1285                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1242                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1171                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1165                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1148                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1141                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1139                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1132                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1131                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1123                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1034                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~1021                                        ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~997                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~992                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~949                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~901                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~871                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~823                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~822                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~821                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~794                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~790                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~783                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~779                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux6~5                                            ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~743                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~7                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~712                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~704                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~685                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~682                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux8~10                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~674                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~663                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~637                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~635                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~607                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~535                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~533                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~488                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~466                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~463                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~444                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~434                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~427                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~426                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~418                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~365                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~323                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~272                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~242                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~199                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~154                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~142                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~126                                         ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~82                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux10~4                                           ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux11~74                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|lpm_mult:Mult1|multcore:mult_core|romout[1][1]~23 ; 3       ;
+; vga_sync:vga_sync_dev|y_pxl[0]~6                                          ; 3       ;
+; vga_sync:vga_sync_dev|y_pxl[3]~5                                          ; 3       ;
+; vga_sync:vga_sync_dev|y_pxl[2]~4                                          ; 3       ;
+; pixel_gen:pixel_gen_dev|Mux3~1036                                         ; 2       ;
+; vga_sync:vga_sync_dev|always2~0                                           ; 2       ;
+; vga_sync:vga_sync_dev|always1~2                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux0~461                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux0~460                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux0~440                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux0~409                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux0~366                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux0~342                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux0~76                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux0~50                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~702                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~583                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~492                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~320                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~279                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux11~1348                                        ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~194                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~193                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~154                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~142                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux0~14                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~22                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~8                                            ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~830                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~790                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~786                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~785                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~760                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~759                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~654                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~620                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~593                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~550                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~540                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~539                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux9~907                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~510                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~481                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~463                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~462                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~415                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~414                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~311                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~310                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~261                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~260                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~250                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~239                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~227                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~224                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~196                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~190                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~172                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~171                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~154                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~80                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~79                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~61                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~31                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~1005                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~1004                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~998                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~932                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~928                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~923                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~885                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~874                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~873                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~850                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~835                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~818                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~771                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~697                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~696                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~686                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~569                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~559                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~558                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~546                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~492                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~435                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~430                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~429                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~419                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~409                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~391                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~329                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~312                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~273                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~266                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~265                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~253                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~202                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~175                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~153                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~146                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~135                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~133                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~102                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~618                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~98                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~97                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~75                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~74                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~69                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~68                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~58                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~57                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~30                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~29                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux9~905                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux3~17                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|rgb[8]~29                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~26                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~592                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~551                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~548                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~506                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~505                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~25                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~333                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~325                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~316                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~314                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~280                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~165                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~161                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~157                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~130                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~125                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux4~61                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux10~1043                                        ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~797                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~790                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux10~1042                                        ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~757                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~756                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~755                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~749                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~728                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~693                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~677                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~673                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~672                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~668                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~623                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~601                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~3                                            ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~591                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~550                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~547                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~538                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~501                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~499                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~477                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~473                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~472                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~447                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~446                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~437                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~430                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~417                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~416                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~372                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~334                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~325                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~276                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~261                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~248                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~247                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~231                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~226                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~210                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~209                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~188                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~153                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~116                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~103                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux1~2                                            ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~70                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~61                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~55                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~42                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~37                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1195                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~894                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~893                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~872                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~871                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~867                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~866                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~841                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~836                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~835                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~817                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~816                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~812                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~805                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~791                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~782                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~776                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~745                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~736                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~732                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~731                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~727                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~725                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~703                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~676                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~674                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~673                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~664                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~648                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux11~1342                                        ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux10~1040                                        ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~631                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux2~24                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~591                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~586                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~585                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~538                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~537                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~530                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~520                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~519                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~495                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~462                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~450                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~442                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~424                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~348                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~344                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~343                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~306                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~305                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~299                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~298                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~272                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~271                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux10~1038                                        ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~241                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~237                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~209                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~200                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~192                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~173                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~167                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~135                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~121                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~120                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~106                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~104                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~86                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~79                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~72                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~56                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~39                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~35                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~24                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux6~17                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1190                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1166                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1156                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1147                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1136                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1131                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1126                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1125                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1108                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1107                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1093                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1085                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1084                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1081                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1045                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1017                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1016                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1014                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~1012                                         ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~997                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~996                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~952                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~951                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~909                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~887                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~848                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~842                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~832                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~827                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux11~1336                                        ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~814                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~813                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~808                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~807                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~802                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~775                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~774                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~769                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~766                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~749                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~723                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~722                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux5~24                                           ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~706                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~704                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~703                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~693                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~672                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~671                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~666                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~665                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~639                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~638                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~628                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~627                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~595                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~531                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux11~1334                                        ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~476                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~459                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~458                                          ; 2       ;
+; pixel_gen:pixel_gen_dev|Mux7~427                                          ; 2       ;
++---------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Other Routing Usage Summary                         ;
-+-----------------------------+-----------------------+
-; Other Routing Resource Type ; Usage                 ;
-+-----------------------------+-----------------------+
-; Block interconnects         ; 54 / 54,004 ( < 1 % ) ;
-; C16 interconnects           ; 0 / 2,100 ( 0 % )     ;
-; C4 interconnects            ; 18 / 36,000 ( < 1 % ) ;
-; Direct links                ; 32 / 54,004 ( < 1 % ) ;
-; Global clocks               ; 1 / 16 ( 6 % )        ;
-; Local interconnects         ; 34 / 18,752 ( < 1 % ) ;
-; R24 interconnects           ; 1 / 1,900 ( < 1 % )   ;
-; R4 interconnects            ; 30 / 46,920 ( < 1 % ) ;
-+-----------------------------+-----------------------+
++--------------------------------------------------------+
+; Other Routing Usage Summary                            ;
++-----------------------------+--------------------------+
+; Other Routing Resource Type ; Usage                    ;
++-----------------------------+--------------------------+
+; Block interconnects         ; 13,808 / 54,004 ( 26 % ) ;
+; C16 interconnects           ; 177 / 2,100 ( 8 % )      ;
+; C4 interconnects            ; 6,331 / 36,000 ( 18 % )  ;
+; Direct links                ; 1,349 / 54,004 ( 2 % )   ;
+; Global clocks               ; 1 / 16 ( 6 % )           ;
+; Local interconnects         ; 7,520 / 18,752 ( 40 % )  ;
+; R24 interconnects           ; 282 / 1,900 ( 15 % )     ;
+; R4 interconnects            ; 6,827 / 46,920 ( 15 % )  ;
++-----------------------------+--------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Logic Elements                                                        ;
-+---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 12.25) ; Number of LABs  (Total = 4) ;
-+---------------------------------------------+-----------------------------+
-; 1                                           ; 1                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 3                           ;
-+---------------------------------------------+-----------------------------+
++-----------------------------------------------------------------------------+
+; LAB Logic Elements                                                          ;
++---------------------------------------------+-------------------------------+
+; Number of Logic Elements  (Average = 15.22) ; Number of LABs  (Total = 725) ;
++---------------------------------------------+-------------------------------+
+; 1                                           ; 3                             ;
+; 2                                           ; 4                             ;
+; 3                                           ; 0                             ;
+; 4                                           ; 1                             ;
+; 5                                           ; 0                             ;
+; 6                                           ; 1                             ;
+; 7                                           ; 1                             ;
+; 8                                           ; 1                             ;
+; 9                                           ; 1                             ;
+; 10                                          ; 2                             ;
+; 11                                          ; 16                            ;
+; 12                                          ; 11                            ;
+; 13                                          ; 24                            ;
+; 14                                          ; 62                            ;
+; 15                                          ; 86                            ;
+; 16                                          ; 512                           ;
++---------------------------------------------+-------------------------------+
 
 
-+------------------------------------------------------------------+
-; LAB-wide Signals                                                 ;
-+------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.75) ; Number of LABs  (Total = 4) ;
-+------------------------------------+-----------------------------+
-; 1 Async. clear                     ; 3                           ;
-; 1 Clock                            ; 4                           ;
-+------------------------------------+-----------------------------+
++--------------------------------------------------------------------+
+; LAB-wide Signals                                                   ;
++------------------------------------+-------------------------------+
+; LAB-wide Signals  (Average = 0.01) ; Number of LABs  (Total = 725) ;
++------------------------------------+-------------------------------+
+; 1 Async. clear                     ; 3                             ;
+; 1 Clock                            ; 4                             ;
++------------------------------------+-------------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Signals Sourced                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 18.00) ; Number of LABs  (Total = 4) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
-; 2                                            ; 1                           ;
-; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
-; 11                                           ; 0                           ;
-; 12                                           ; 0                           ;
-; 13                                           ; 0                           ;
-; 14                                           ; 0                           ;
-; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
-; 17                                           ; 0                           ;
-; 18                                           ; 0                           ;
-; 19                                           ; 1                           ;
-; 20                                           ; 0                           ;
-; 21                                           ; 0                           ;
-; 22                                           ; 0                           ;
-; 23                                           ; 0                           ;
-; 24                                           ; 0                           ;
-; 25                                           ; 1                           ;
-; 26                                           ; 1                           ;
-+----------------------------------------------+-----------------------------+
++------------------------------------------------------------------------------+
+; LAB Signals Sourced                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Signals Sourced  (Average = 15.25) ; Number of LABs  (Total = 725) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 2                             ;
+; 2                                            ; 5                             ;
+; 3                                            ; 0                             ;
+; 4                                            ; 1                             ;
+; 5                                            ; 0                             ;
+; 6                                            ; 1                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 1                             ;
+; 9                                            ; 1                             ;
+; 10                                           ; 2                             ;
+; 11                                           ; 16                            ;
+; 12                                           ; 11                            ;
+; 13                                           ; 24                            ;
+; 14                                           ; 62                            ;
+; 15                                           ; 86                            ;
+; 16                                           ; 509                           ;
+; 17                                           ; 0                             ;
+; 18                                           ; 1                             ;
+; 19                                           ; 0                             ;
+; 20                                           ; 0                             ;
+; 21                                           ; 0                             ;
+; 22                                           ; 0                             ;
+; 23                                           ; 0                             ;
+; 24                                           ; 0                             ;
+; 25                                           ; 1                             ;
+; 26                                           ; 0                             ;
+; 27                                           ; 1                             ;
++----------------------------------------------+-------------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                       ;
-+-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 8.25) ; Number of LABs  (Total = 4) ;
-+-------------------------------------------------+-----------------------------+
-; 0                                               ; 0                           ;
-; 1                                               ; 1                           ;
-; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
-; 4                                               ; 0                           ;
-; 5                                               ; 0                           ;
-; 6                                               ; 0                           ;
-; 7                                               ; 0                           ;
-; 8                                               ; 1                           ;
-; 9                                               ; 0                           ;
-; 10                                              ; 0                           ;
-; 11                                              ; 0                           ;
-; 12                                              ; 2                           ;
-+-------------------------------------------------+-----------------------------+
++---------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                         ;
++-------------------------------------------------+-------------------------------+
+; Number of Signals Sourced Out  (Average = 5.62) ; Number of LABs  (Total = 725) ;
++-------------------------------------------------+-------------------------------+
+; 0                                               ; 0                             ;
+; 1                                               ; 31                            ;
+; 2                                               ; 52                            ;
+; 3                                               ; 78                            ;
+; 4                                               ; 104                           ;
+; 5                                               ; 121                           ;
+; 6                                               ; 95                            ;
+; 7                                               ; 75                            ;
+; 8                                               ; 57                            ;
+; 9                                               ; 49                            ;
+; 10                                              ; 28                            ;
+; 11                                              ; 18                            ;
+; 12                                              ; 10                            ;
+; 13                                              ; 1                             ;
+; 14                                              ; 5                             ;
+; 15                                              ; 1                             ;
++-------------------------------------------------+-------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 9.25) ; Number of LABs  (Total = 4) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 1                           ;
-; 2                                           ; 1                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 0                           ;
-; 13                                          ; 1                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 0                           ;
-; 17                                          ; 0                           ;
-; 18                                          ; 0                           ;
-; 19                                          ; 0                           ;
-; 20                                          ; 0                           ;
-; 21                                          ; 1                           ;
-+---------------------------------------------+-----------------------------+
++------------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Distinct Inputs  (Average = 17.78) ; Number of LABs  (Total = 725) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 1                             ;
+; 2                                            ; 0                             ;
+; 3                                            ; 0                             ;
+; 4                                            ; 4                             ;
+; 5                                            ; 0                             ;
+; 6                                            ; 7                             ;
+; 7                                            ; 6                             ;
+; 8                                            ; 21                            ;
+; 9                                            ; 25                            ;
+; 10                                           ; 40                            ;
+; 11                                           ; 40                            ;
+; 12                                           ; 49                            ;
+; 13                                           ; 43                            ;
+; 14                                           ; 32                            ;
+; 15                                           ; 37                            ;
+; 16                                           ; 29                            ;
+; 17                                           ; 44                            ;
+; 18                                           ; 31                            ;
+; 19                                           ; 35                            ;
+; 20                                           ; 20                            ;
+; 21                                           ; 31                            ;
+; 22                                           ; 33                            ;
+; 23                                           ; 25                            ;
+; 24                                           ; 24                            ;
+; 25                                           ; 28                            ;
+; 26                                           ; 26                            ;
+; 27                                           ; 28                            ;
+; 28                                           ; 24                            ;
+; 29                                           ; 17                            ;
+; 30                                           ; 25                            ;
++----------------------------------------------+-------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -1246,7 +2168,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EP2C20F484C7 for design "vga_test"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1270,19 +2192,19 @@ Info (176353): Automatically promoted node vga_sync:vga_sync_dev|clk_div
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:11
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:18
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:53
 Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X38_Y14 to location X50_Y27
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (170195): Router estimated average interconnect usage is 16% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 32% of the available device resources in the region that extends from location X12_Y14 to location X24_Y27
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.47 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 7.28 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 14 output pins without output pin load capacitance assignment
     Info (306007): Pin "rgb[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1302,19 +2224,19 @@ Warning (306006): Found 14 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:23
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/output_files/vga_test.fit.smsg
-Info: Quartus II 32-bit Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 475 megabytes
-    Info: Processing ended: Tue Oct 13 03:29:03 2015
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+Info (144001): Generated suppressed messages file C:/Users/BakuKurae/Documents/Master/fpga/vga_barColor/output_files/vga_test.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 762 megabytes
+    Info: Processing ended: Sun Apr 12 19:55:58 2020
+    Info: Elapsed time: 00:03:05
+    Info: Total CPU time (on all processors): 00:03:03
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/output_files/vga_test.fit.smsg.
+The suppressed messages can be found in C:/Users/BakuKurae/Documents/Master/fpga/vga_barColor/output_files/vga_test.fit.smsg.
 
 

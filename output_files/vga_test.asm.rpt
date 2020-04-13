@@ -1,6 +1,6 @@
 Assembler report for vga_test
-Tue Oct 13 03:29:06 2015
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Sun Apr 12 19:56:05 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -10,8 +10,8 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/output_files/vga_test.sof
-  6. Assembler Device Options: C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/output_files/vga_test.pof
+  5. Assembler Device Options: C:/Users/BakuKurae/Documents/Master/fpga/vga_barColor/output_files/vga_test.sof
+  6. Assembler Device Options: C:/Users/BakuKurae/Documents/Master/fpga/vga_barColor/output_files/vga_test.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Oct 13 03:29:06 2015 ;
+; Assembler Status      ; Successful - Sun Apr 12 19:56:05 2020 ;
 ; Revision Name         ; vga_test                              ;
 ; Top-level Entity Name ; vga_driver                            ;
 ; Family                ; Cyclone II                            ;
@@ -78,53 +78,53 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------+
-; Assembler Generated Files                                          ;
-+--------------------------------------------------------------------+
-; File Name                                                          ;
-+--------------------------------------------------------------------+
-; C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/output_files/vga_test.sof ;
-; C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/output_files/vga_test.pof ;
-+--------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Assembler Generated Files                                                       ;
++---------------------------------------------------------------------------------+
+; File Name                                                                       ;
++---------------------------------------------------------------------------------+
+; C:/Users/BakuKurae/Documents/Master/fpga/vga_barColor/output_files/vga_test.sof ;
+; C:/Users/BakuKurae/Documents/Master/fpga/vga_barColor/output_files/vga_test.pof ;
++---------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/output_files/vga_test.sof ;
-+----------------+-----------------------------------------------------------------------------+
-; Option         ; Setting                                                                     ;
-+----------------+-----------------------------------------------------------------------------+
-; Device         ; EP2C20F484C7                                                                ;
-; JTAG usercode  ; 0x001B786F                                                                  ;
-; Checksum       ; 0x001B786F                                                                  ;
-+----------------+-----------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/BakuKurae/Documents/Master/fpga/vga_barColor/output_files/vga_test.sof ;
++----------------+------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                  ;
++----------------+------------------------------------------------------------------------------------------+
+; Device         ; EP2C20F484C7                                                                             ;
+; JTAG usercode  ; 0x008F5B7C                                                                               ;
+; Checksum       ; 0x008F5B7C                                                                               ;
++----------------+------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Grd/Desktop/vga_hdmi/cyclonevga/output_files/vga_test.pof ;
-+--------------------+-------------------------------------------------------------------------+
-; Option             ; Setting                                                                 ;
-+--------------------+-------------------------------------------------------------------------+
-; Device             ; EPCS16                                                                  ;
-; JTAG usercode      ; 0x00000000                                                              ;
-; Checksum           ; 0x1DD90F6D                                                              ;
-; Compression Ratio  ; 3                                                                       ;
-+--------------------+-------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/BakuKurae/Documents/Master/fpga/vga_barColor/output_files/vga_test.pof ;
++--------------------+--------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                              ;
++--------------------+--------------------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                               ;
+; JTAG usercode      ; 0x00000000                                                                           ;
+; Checksum           ; 0x1D4BD357                                                                           ;
+; Compression Ratio  ; 2                                                                                    ;
++--------------------+--------------------------------------------------------------------------------------+
 
 
 +--------------------+
 ; Assembler Messages ;
 +--------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Assembler
+Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 13 03:29:04 2015
+    Info: Processing started: Sun Apr 12 19:55:59 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off vga_test -c vga_test
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
-Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 366 megabytes
-    Info: Processing ended: Tue Oct 13 03:29:06 2015
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 458 megabytes
+    Info: Processing ended: Sun Apr 12 19:56:05 2020
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 
