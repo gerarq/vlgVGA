@@ -1,5 +1,5 @@
 module pixel_gen (
-input wire rst,
+   input wire rst,
 input wire [9:0]x_pxl,y_pxl,
 output wire [11:0]rgb
 );
